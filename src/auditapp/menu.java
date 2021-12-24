@@ -69,7 +69,7 @@ public class menu extends javax.swing.JFrame {
         jLabel_inven2.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         jLabel_inven2.setForeground(new java.awt.Color(169, 224, 49));
         jLabel_inven2.setText("MENU");
-        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 220, 50));
+        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 220, 50));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

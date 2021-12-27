@@ -7,6 +7,7 @@
 package auditapp;
 
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -15,7 +16,17 @@ import javax.swing.UIManager;
  * @author Yaseen Ameer
  */
 public class PO9 extends javax.swing.JFrame {
+    int cb41a, cb42a, cb43a, cb44a, cb45a, cb46a, cb47a, cb48a;
+    int cb31b, cb32b, cb33b, cb34b, cb35b, cb36b, cb37b, cb38b;
+    int cb21c, cb22c, cb23c, cb24c, cb25c, cb26c, cb27c, cb28c;
+    int cb11d, cb12d, cb13d, cb14d, cb15d, cb16d, cb17d, cb18d;
     
+    
+    int a, b, c, d, e;
+    
+    int a1,a2,a3,a4;
+    
+    double f;
 
     /**
      * Creates new form NewSignin
@@ -59,13 +70,6 @@ public class PO9 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jLabel_inven11 = new javax.swing.JLabel();
-        jLabel_inven15 = new javax.swing.JLabel();
-        jLabel_inven16 = new javax.swing.JLabel();
-        jLabel_inven22 = new javax.swing.JLabel();
-        jLabel_inven23 = new javax.swing.JLabel();
-        jLabel_inven27 = new javax.swing.JLabel();
-        jLabel_inven28 = new javax.swing.JLabel();
-        jLabel_inven29 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel_inven10 = new javax.swing.JLabel();
         jLabel_inven17 = new javax.swing.JLabel();
@@ -75,70 +79,82 @@ public class PO9 extends javax.swing.JFrame {
         jLabel_inven33 = new javax.swing.JLabel();
         jLabel_inven34 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel_inven38 = new javax.swing.JLabel();
-        jLabel_inven39 = new javax.swing.JLabel();
         jLabel_inven40 = new javax.swing.JLabel();
+        jLabel_inven43 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel_inven56 = new javax.swing.JLabel();
+        test1 = new javax.swing.JTextField();
+        test2 = new javax.swing.JTextField();
+        test3 = new javax.swing.JTextField();
+        test4 = new javax.swing.JTextField();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel_inven53 = new javax.swing.JLabel();
+        label3 = new java.awt.Label();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel_inven55 = new javax.swing.JLabel();
+        test5 = new javax.swing.JTextField();
+        cb11 = new javax.swing.JCheckBox();
+        cb31 = new javax.swing.JCheckBox();
+        cb21 = new javax.swing.JCheckBox();
+        cb41 = new javax.swing.JCheckBox();
+        cb43 = new javax.swing.JCheckBox();
+        cb33 = new javax.swing.JCheckBox();
+        cb23 = new javax.swing.JCheckBox();
+        cb13 = new javax.swing.JCheckBox();
+        cb45 = new javax.swing.JCheckBox();
+        cb35 = new javax.swing.JCheckBox();
+        cb25 = new javax.swing.JCheckBox();
+        cb15 = new javax.swing.JCheckBox();
+        cb46 = new javax.swing.JCheckBox();
+        cb36 = new javax.swing.JCheckBox();
+        cb26 = new javax.swing.JCheckBox();
+        cb16 = new javax.swing.JCheckBox();
+        cb44 = new javax.swing.JCheckBox();
+        cb34 = new javax.swing.JCheckBox();
+        cb24 = new javax.swing.JCheckBox();
+        cb14 = new javax.swing.JCheckBox();
+        cb42 = new javax.swing.JCheckBox();
+        cb32 = new javax.swing.JCheckBox();
+        cb22 = new javax.swing.JCheckBox();
+        cb12 = new javax.swing.JCheckBox();
+        jPanel2 = new javax.swing.JPanel();
+        test6 = new javax.swing.JTextField();
+        jPanel11 = new javax.swing.JPanel();
+        test7 = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
+        cb47 = new javax.swing.JCheckBox();
+        cb37 = new javax.swing.JCheckBox();
+        cb27 = new javax.swing.JCheckBox();
+        cb17 = new javax.swing.JCheckBox();
+        jPanel14 = new javax.swing.JPanel();
+        label2 = new java.awt.Label();
+        jLabel_inven57 = new javax.swing.JLabel();
+        jLabel_inven6 = new javax.swing.JLabel();
+        jLabel_inven12 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel_inven44 = new javax.swing.JLabel();
         jLabel_inven45 = new javax.swing.JLabel();
         jLabel_inven46 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel_inven32 = new javax.swing.JLabel();
-        jLabel_inven35 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel_inven41 = new javax.swing.JLabel();
-        jLabel_inven42 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel_inven47 = new javax.swing.JLabel();
         jLabel_inven48 = new javax.swing.JLabel();
-        jLabel_inven51 = new javax.swing.JLabel();
-        jLabel_inven52 = new javax.swing.JLabel();
-        jLabel_inven53 = new javax.swing.JLabel();
-        jLabel_inven54 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
         jLabel_inven49 = new javax.swing.JLabel();
-        jLabel_inven55 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
+        jLabel_inven7 = new javax.swing.JLabel();
+        jLabel_inven13 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
         jLabel_inven50 = new javax.swing.JLabel();
-        jnb = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox13 = new javax.swing.JCheckBox();
-        jCheckBox18 = new javax.swing.JCheckBox();
-        jCheckBox19 = new javax.swing.JCheckBox();
-        jCheckBox20 = new javax.swing.JCheckBox();
-        jCheckBox21 = new javax.swing.JCheckBox();
-        jCheckBox26 = new javax.swing.JCheckBox();
-        jCheckBox27 = new javax.swing.JCheckBox();
-        jCheckBox28 = new javax.swing.JCheckBox();
-        jCheckBox29 = new javax.swing.JCheckBox();
-        jCheckBox34 = new javax.swing.JCheckBox();
-        jCheckBox35 = new javax.swing.JCheckBox();
-        jCheckBox36 = new javax.swing.JCheckBox();
-        jCheckBox37 = new javax.swing.JCheckBox();
-        jCheckBox42 = new javax.swing.JCheckBox();
-        jCheckBox43 = new javax.swing.JCheckBox();
-        jCheckBox44 = new javax.swing.JCheckBox();
-        jCheckBox45 = new javax.swing.JCheckBox();
-        jCheckBox46 = new javax.swing.JCheckBox();
-        jCheckBox47 = new javax.swing.JCheckBox();
-        jCheckBox48 = new javax.swing.JCheckBox();
-        jCheckBox49 = new javax.swing.JCheckBox();
-        jCheckBox50 = new javax.swing.JCheckBox();
-        jCheckBox51 = new javax.swing.JCheckBox();
-        jCheckBox52 = new javax.swing.JCheckBox();
-        jCheckBox53 = new javax.swing.JCheckBox();
-        jCheckBox54 = new javax.swing.JCheckBox();
-        jCheckBox58 = new javax.swing.JCheckBox();
-        jCheckBox59 = new javax.swing.JCheckBox();
-        jCheckBox60 = new javax.swing.JCheckBox();
-        jCheckBox61 = new javax.swing.JCheckBox();
-        jPanel2 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
-        jPanel11 = new javax.swing.JPanel();
-        indeksTxt = new java.awt.Label();
+        jLabel_inven51 = new javax.swing.JLabel();
+        jLabel_inven8 = new javax.swing.JLabel();
+        jLabel_inven14 = new javax.swing.JLabel();
+        jLabel_inven9 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel_inven52 = new javax.swing.JLabel();
+        jLabel_inven54 = new javax.swing.JLabel();
+        jLabel_inven58 = new javax.swing.JLabel();
+        cb48 = new javax.swing.JCheckBox();
+        cb38 = new javax.swing.JCheckBox();
+        cb28 = new javax.swing.JCheckBox();
+        cb18 = new javax.swing.JCheckBox();
 
         jCheckBox3.setBackground(new java.awt.Color(0, 153, 102));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 0));
@@ -200,11 +216,11 @@ public class PO9 extends javax.swing.JFrame {
         jLabel_inven2.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         jLabel_inven2.setForeground(new java.awt.Color(169, 224, 49));
         jLabel_inven2.setText("Plan And Organize 9 (assess and managae IT Risk)");
-        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 830, 50));
+        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1180, 50));
 
         jLabel_inven5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven5.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven5.setText("Apakah pembuatan suatu framework penilaian resiko yang sistematis telah mencapai tujuan bisnis?");
+        jLabel_inven5.setText("Apakah pembuatan suatu framework penilaian resiko yang sistematis telah membantu dalam mencapai tujuan bisnis?");
         jPanel1.add(jLabel_inven5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 1090, 50));
 
         jButton8.setBackground(new java.awt.Color(152, 201, 45));
@@ -219,7 +235,7 @@ public class PO9 extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 740, 110, 40));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 770, 110, 40));
 
         jButton9.setBackground(new java.awt.Color(152, 201, 45));
         jButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -233,54 +249,19 @@ public class PO9 extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 740, 190, 40));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 810, 190, 40));
 
         jLabel_inven11.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven11.setForeground(new java.awt.Color(169, 224, 49));
         jLabel_inven11.setText("1 .");
         jPanel1.add(jLabel_inven11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 40, 50));
 
-        jLabel_inven15.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven15.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven15.setText("Apakah Pengujian elemen dasar pada sistem aplikasi telah menjelaskan resiko dan hubungan sebab Akibat?");
-        jPanel1.add(jLabel_inven15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 1090, 50));
-
-        jLabel_inven16.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven16.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven16.setText("3 .");
-        jPanel1.add(jLabel_inven16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 40, 50));
-
-        jLabel_inven22.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven22.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven22.setText("Apakah ketentuan rencana kerja penanganan resiko sistem aplikasi telah memastikan pengendalian Biaya yang efektif?");
-        jPanel1.add(jLabel_inven22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 1090, 50));
-
-        jLabel_inven23.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven23.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven23.setText("5 .");
-        jPanel1.add(jLabel_inven23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 40, 50));
-
-        jLabel_inven27.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven27.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven27.setText("Apakah sisa resiko sistem aplikasi yang masih ada telah diterima dengan mempertimbangkan faktor efek dari resiko tersebut, faktor ");
-        jPanel1.add(jLabel_inven27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 1090, 50));
-
-        jLabel_inven28.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven28.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven28.setText("7 .");
-        jPanel1.add(jLabel_inven28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 40, 50));
-
-        jLabel_inven29.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven29.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven29.setText("Kebijakan akademi, faktor ketidakpastian dan faktor efektivitas biaya penerapan pengamanan sistem dan pengendalian internalnya?");
-        jPanel1.add(jLabel_inven29, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 1090, 50));
-
         jPanel4.setBackground(new java.awt.Color(153, 153, 0));
 
-        jLabel_inven10.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
+        jLabel_inven10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven10.setText("No");
 
-        jLabel_inven17.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
+        jLabel_inven17.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel_inven17.setText("Pertanyaan");
 
         jLabel_inven18.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
@@ -296,7 +277,7 @@ public class PO9 extends javax.swing.JFrame {
         jLabel_inven33.setText("TS");
 
         jLabel_inven34.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        jLabel_inven34.setText("Bobot");
+        jLabel_inven34.setText("Skala");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -304,548 +285,520 @@ public class PO9 extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_inven10, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addComponent(jLabel_inven10)
+                .addGap(363, 363, 363)
                 .addComponent(jLabel_inven17, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 817, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 534, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel_inven21)
-                        .addGap(52, 52, 52)
+                        .addGap(49, 49, 49)
                         .addComponent(jLabel_inven18)
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel_inven24))
-                    .addComponent(jLabel_inven34))
-                .addGap(41, 41, 41)
-                .addComponent(jLabel_inven33)
-                .addGap(18, 18, 18))
+                        .addGap(55, 55, 55)
+                        .addComponent(jLabel_inven24)
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel_inven33)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel_inven34)
+                        .addGap(85, 85, 85))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel_inven34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_inven21)
                     .addComponent(jLabel_inven18)
                     .addComponent(jLabel_inven24)
                     .addComponent(jLabel_inven33)))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_inven17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_inven10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                    .addComponent(jLabel_inven10)
+                    .addComponent(jLabel_inven17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 1430, 80));
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 51));
-
-        jLabel_inven38.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven38.setText("Apakah dalam menilai resiko sistem aplikasi yang telah dilakukan suatu pendekatan umum penilaian resiko yang menentukan ruang ");
-
-        jLabel_inven39.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven39.setText("lingkup batasan, serta metodologi yang digunakan?");
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_inven40.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven40.setText("2 .");
+        jLabel_inven40.setText("6 .");
+        jPanel5.add(jLabel_inven40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 33));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_inven40, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_inven39, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_inven38, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_inven40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel_inven39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel_inven38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        jLabel_inven43.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven43.setText("Apakah rencana kerja penanganan resiko sistem aplikasi telah mengukur keamanan serta mengurangi munculnya resiko lainnya?");
+        jPanel5.add(jLabel_inven43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1090, 30));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1140, 80));
-
-        jPanel6.setBackground(new java.awt.Color(0, 153, 51));
-
-        jLabel_inven44.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven44.setText("melalui proses penentuan rencana strategi SI dan dalam pengawasan serta mekanisme evaluasi SI?");
-
-        jLabel_inven45.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven45.setText("Apakah Penilaian resiko sebagai suatu alat penting didalam perancangan dan pengimplementasian pengendalian internal telah dilakukan");
-
-        jLabel_inven46.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven46.setText("8 .");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_inven46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_inven44, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_inven45, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel_inven44, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel_inven46, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_inven45, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 1140, 80));
-
-        jPanel7.setBackground(new java.awt.Color(0, 153, 51));
-
-        jLabel_inven32.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven32.setText("Apakah resiko sistem aplikasi yang diuji telah dihasilkan dari suatu pengukuran kuatitatif atau Kualitatif melalui analisis resiko?");
-
-        jLabel_inven35.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven35.setText("4 .");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel_inven32, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel_inven35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_inven32, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_inven35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 1140, 40));
-
-        jPanel8.setBackground(new java.awt.Color(0, 153, 51));
-
-        jLabel_inven41.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven41.setText("Apakah rencana kerja penanganan resiko sistem aplikasi telah mengukur keamanan serta mengurangi Munculnya resiko Lainnya?");
-
-        jLabel_inven42.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven42.setText("6 .");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel_inven41, javax.swing.GroupLayout.PREFERRED_SIZE, 1090, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel_inven42, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_inven41, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_inven42, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 1140, 40));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 1140, 40));
 
         jPanel9.setBackground(new java.awt.Color(0, 153, 51));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_inven48.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven48.setText("0");
-        jPanel9.add(jLabel_inven48, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 0, 20, 30));
+        jLabel_inven56.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven56.setText("Jumlah");
+        jPanel9.add(jLabel_inven56, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel_inven51.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven51.setText("Jumlah");
-        jPanel9.add(jLabel_inven51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
+        test1.setBackground(new java.awt.Color(0, 204, 0));
+        test1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test1.setText("0");
+        test1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test1MouseMoved(evt);
+            }
+        });
+        test1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test1MouseExited(evt);
+            }
+        });
+        test1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test1ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(test1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 0, 40, 40));
 
-        jLabel_inven52.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven52.setText("0");
-        jPanel9.add(jLabel_inven52, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 0, 20, 30));
+        test2.setBackground(new java.awt.Color(0, 204, 0));
+        test2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test2.setText("0");
+        test2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test2MouseMoved(evt);
+            }
+        });
+        test2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test2MouseExited(evt);
+            }
+        });
+        test2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test2ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 0, 40, 40));
 
-        jLabel_inven53.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven53.setText("0");
-        jPanel9.add(jLabel_inven53, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 0, 20, 30));
+        test3.setBackground(new java.awt.Color(0, 204, 0));
+        test3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test3.setText("0");
+        test3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test3MouseMoved(evt);
+            }
+        });
+        test3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test3MouseExited(evt);
+            }
+        });
+        test3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test3ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(test3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 0, 40, 40));
 
-        jLabel_inven54.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven54.setText("0");
-        jPanel9.add(jLabel_inven54, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 0, 20, 30));
+        test4.setBackground(new java.awt.Color(0, 204, 0));
+        test4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test4.setText("0");
+        test4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test4MouseMoved(evt);
+            }
+        });
+        test4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test4MouseExited(evt);
+            }
+        });
+        test4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test4ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(test4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 0, 40, 40));
 
-        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, 1410, 40));
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 1410, 40));
 
         jPanel12.setBackground(new java.awt.Color(0, 153, 51));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_inven49.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven49.setText("8");
-        jPanel12.add(jLabel_inven49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 0, 30, 30));
+        jLabel_inven53.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven53.setText("Jumlah Pertanyaan");
 
-        jLabel_inven55.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven55.setText("Jumlah Pertanyaan");
-        jPanel12.add(jLabel_inven55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
+        label3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label3.setText("8");
 
-        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, 1250, 40));
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(jLabel_inven53, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 935, Short.MAX_VALUE)
+                .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_inven53, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 1230, 40));
 
         jPanel13.setBackground(new java.awt.Color(0, 153, 51));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_inven50.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jLabel_inven50.setText("Jumlah Nilai Jawaban");
-        jPanel13.add(jLabel_inven50, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
+        jLabel_inven55.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven55.setText("Jumlah Nilai Jawaban");
 
-        jnb.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jnb.setText("0");
-        jPanel13.add(jnb, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 0, 20, 30));
-
-        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 690, 1250, 40));
-
-        jCheckBox1.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox1.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+        test5.setBackground(new java.awt.Color(0, 204, 0));
+        test5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test5.setText("0");
+        test5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test5MouseMoved(evt);
             }
         });
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 140, -1, -1));
-
-        jCheckBox2.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox2.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+        test5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test5MouseExited(evt);
             }
         });
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 140, -1, -1));
-
-        jCheckBox4.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox4.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        test5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                test5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 140, -1, -1));
 
-        jCheckBox5.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox5.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 941, Short.MAX_VALUE)
+                .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(211, 211, 211))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 710, 1410, 40));
+
+        cb11.setBackground(new java.awt.Color(0, 153, 102));
+        cb11.setForeground(new java.awt.Color(255, 255, 0));
+        cb11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                cb11ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 140, -1, -1));
+        jPanel1.add(cb11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 150, -1, -1));
 
-        jCheckBox13.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox13.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+        cb31.setBackground(new java.awt.Color(0, 153, 102));
+        cb31.setForeground(new java.awt.Color(255, 255, 0));
+        cb31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox13ActionPerformed(evt);
+                cb31ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 140, -1, -1));
+        jPanel1.add(cb31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 150, -1, -1));
 
-        jCheckBox18.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox18.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox18.addActionListener(new java.awt.event.ActionListener() {
+        cb21.setBackground(new java.awt.Color(0, 153, 102));
+        cb21.setForeground(new java.awt.Color(255, 255, 0));
+        cb21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox18ActionPerformed(evt);
+                cb21ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 260, -1, -1));
+        jPanel1.add(cb21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 150, -1, -1));
 
-        jCheckBox19.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox19.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox19.addActionListener(new java.awt.event.ActionListener() {
+        cb41.setBackground(new java.awt.Color(0, 153, 102));
+        cb41.setForeground(new java.awt.Color(255, 255, 0));
+        cb41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox19ActionPerformed(evt);
+                cb41ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 260, -1, -1));
+        jPanel1.add(cb41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 150, -1, -1));
 
-        jCheckBox20.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox20.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
+        cb43.setBackground(new java.awt.Color(0, 153, 102));
+        cb43.setForeground(new java.awt.Color(255, 255, 0));
+        cb43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox20ActionPerformed(evt);
+                cb43ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 260, -1, -1));
+        jPanel1.add(cb43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 270, -1, -1));
 
-        jCheckBox21.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox21.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox21.addActionListener(new java.awt.event.ActionListener() {
+        cb33.setBackground(new java.awt.Color(0, 153, 102));
+        cb33.setForeground(new java.awt.Color(255, 255, 0));
+        cb33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox21ActionPerformed(evt);
+                cb33ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 260, -1, -1));
+        jPanel1.add(cb33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 270, -1, -1));
 
-        jCheckBox26.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox26.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox26.addActionListener(new java.awt.event.ActionListener() {
+        cb23.setBackground(new java.awt.Color(0, 153, 102));
+        cb23.setForeground(new java.awt.Color(255, 255, 0));
+        cb23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox26ActionPerformed(evt);
+                cb23ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 340, -1, -1));
+        jPanel1.add(cb23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 270, -1, -1));
 
-        jCheckBox27.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox27.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox27.addActionListener(new java.awt.event.ActionListener() {
+        cb13.setBackground(new java.awt.Color(0, 153, 102));
+        cb13.setForeground(new java.awt.Color(255, 255, 0));
+        cb13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox27ActionPerformed(evt);
+                cb13ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 340, -1, -1));
+        jPanel1.add(cb13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 270, -1, -1));
 
-        jCheckBox28.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox28.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox28.addActionListener(new java.awt.event.ActionListener() {
+        cb45.setBackground(new java.awt.Color(0, 153, 102));
+        cb45.setForeground(new java.awt.Color(255, 255, 0));
+        cb45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox28ActionPerformed(evt);
+                cb45ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox28, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 340, -1, -1));
+        jPanel1.add(cb45, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 360, -1, -1));
 
-        jCheckBox29.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox29.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox29.addActionListener(new java.awt.event.ActionListener() {
+        cb35.setBackground(new java.awt.Color(0, 153, 102));
+        cb35.setForeground(new java.awt.Color(255, 255, 0));
+        cb35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox29ActionPerformed(evt);
+                cb35ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox29, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 340, -1, -1));
+        jPanel1.add(cb35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 360, -1, -1));
 
-        jCheckBox34.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox34.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox34.addActionListener(new java.awt.event.ActionListener() {
+        cb25.setBackground(new java.awt.Color(0, 153, 102));
+        cb25.setForeground(new java.awt.Color(255, 255, 0));
+        cb25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox34ActionPerformed(evt);
+                cb25ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 450, -1, -1));
+        jPanel1.add(cb25, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 360, -1, -1));
 
-        jCheckBox35.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox35.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox35.addActionListener(new java.awt.event.ActionListener() {
+        cb15.setBackground(new java.awt.Color(0, 153, 102));
+        cb15.setForeground(new java.awt.Color(255, 255, 0));
+        cb15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox35ActionPerformed(evt);
+                cb15ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 450, -1, -1));
+        jPanel1.add(cb15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 360, -1, -1));
 
-        jCheckBox36.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox36.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox36.addActionListener(new java.awt.event.ActionListener() {
+        cb46.setBackground(new java.awt.Color(0, 153, 102));
+        cb46.setForeground(new java.awt.Color(255, 255, 0));
+        cb46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox36ActionPerformed(evt);
+                cb46ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 450, -1, -1));
+        jPanel1.add(cb46, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 410, -1, -1));
 
-        jCheckBox37.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox37.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox37.addActionListener(new java.awt.event.ActionListener() {
+        cb36.setBackground(new java.awt.Color(0, 153, 102));
+        cb36.setForeground(new java.awt.Color(255, 255, 0));
+        cb36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox37ActionPerformed(evt);
+                cb36ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 450, -1, -1));
+        jPanel1.add(cb36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 410, -1, -1));
 
-        jCheckBox42.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox42.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox42.addActionListener(new java.awt.event.ActionListener() {
+        cb26.setBackground(new java.awt.Color(0, 153, 102));
+        cb26.setForeground(new java.awt.Color(255, 255, 0));
+        cb26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox42ActionPerformed(evt);
+                cb26ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 520, -1, -1));
+        jPanel1.add(cb26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 410, -1, -1));
 
-        jCheckBox43.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox43.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox43.addActionListener(new java.awt.event.ActionListener() {
+        cb16.setBackground(new java.awt.Color(0, 153, 102));
+        cb16.setForeground(new java.awt.Color(255, 255, 0));
+        cb16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox43ActionPerformed(evt);
+                cb16ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 520, -1, -1));
+        jPanel1.add(cb16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 410, -1, -1));
 
-        jCheckBox44.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox44.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox44.addActionListener(new java.awt.event.ActionListener() {
+        cb44.setBackground(new java.awt.Color(0, 153, 102));
+        cb44.setForeground(new java.awt.Color(255, 255, 0));
+        cb44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox44ActionPerformed(evt);
+                cb44ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox44, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 520, -1, -1));
+        jPanel1.add(cb44, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 310, -1, -1));
 
-        jCheckBox45.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox45.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox45.addActionListener(new java.awt.event.ActionListener() {
+        cb34.setBackground(new java.awt.Color(0, 153, 102));
+        cb34.setForeground(new java.awt.Color(255, 255, 0));
+        cb34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox45ActionPerformed(evt);
+                cb34ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox45, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 520, -1, -1));
+        jPanel1.add(cb34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 310, -1, -1));
 
-        jCheckBox46.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox46.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox46.addActionListener(new java.awt.event.ActionListener() {
+        cb24.setBackground(new java.awt.Color(0, 153, 102));
+        cb24.setForeground(new java.awt.Color(255, 255, 0));
+        cb24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox46ActionPerformed(evt);
+                cb24ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox46, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 380, -1, -1));
+        jPanel1.add(cb24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 310, 20, -1));
 
-        jCheckBox47.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox47.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox47.addActionListener(new java.awt.event.ActionListener() {
+        cb14.setBackground(new java.awt.Color(0, 153, 102));
+        cb14.setForeground(new java.awt.Color(255, 255, 0));
+        cb14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox47ActionPerformed(evt);
+                cb14ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox47, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 380, -1, -1));
+        jPanel1.add(cb14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 310, -1, -1));
 
-        jCheckBox48.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox48.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox48.addActionListener(new java.awt.event.ActionListener() {
+        cb42.setBackground(new java.awt.Color(0, 153, 102));
+        cb42.setForeground(new java.awt.Color(255, 255, 0));
+        cb42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox48ActionPerformed(evt);
+                cb42ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox48, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 380, -1, -1));
+        jPanel1.add(cb42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 200, -1, -1));
 
-        jCheckBox49.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox49.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox49.addActionListener(new java.awt.event.ActionListener() {
+        cb32.setBackground(new java.awt.Color(0, 153, 102));
+        cb32.setForeground(new java.awt.Color(255, 255, 0));
+        cb32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox49ActionPerformed(evt);
+                cb32ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 380, -1, -1));
+        jPanel1.add(cb32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 200, -1, -1));
 
-        jCheckBox50.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox50.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox50.addActionListener(new java.awt.event.ActionListener() {
+        cb22.setBackground(new java.awt.Color(0, 153, 102));
+        cb22.setForeground(new java.awt.Color(255, 255, 0));
+        cb22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox50ActionPerformed(evt);
+                cb22ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox50, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 300, -1, -1));
+        jPanel1.add(cb22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 200, -1, -1));
 
-        jCheckBox51.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox51.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox51.addActionListener(new java.awt.event.ActionListener() {
+        cb12.setBackground(new java.awt.Color(0, 153, 102));
+        cb12.setForeground(new java.awt.Color(255, 255, 0));
+        cb12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox51ActionPerformed(evt);
+                cb12ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox51, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 300, -1, -1));
-
-        jCheckBox52.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox52.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox52ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox52, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 300, -1, -1));
-
-        jCheckBox53.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox53.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox53ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox53, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 300, -1, -1));
-
-        jCheckBox54.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox54.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox54ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox54, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 450, -1, -1));
-
-        jCheckBox58.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox58.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox58ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox58, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 200, -1, -1));
-
-        jCheckBox59.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox59.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox59.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox59ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox59, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 200, -1, -1));
-
-        jCheckBox60.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox60.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox60ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox60, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 200, -1, -1));
-
-        jCheckBox61.setBackground(new java.awt.Color(0, 153, 102));
-        jCheckBox61.setForeground(new java.awt.Color(255, 255, 0));
-        jCheckBox61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox61ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox61, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 200, -1, -1));
+        jPanel1.add(cb12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 200, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 0));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField2.setBackground(new java.awt.Color(0, 204, 0));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField2.setText("0");
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 10, 20, -1));
+        test6.setBackground(new java.awt.Color(0, 204, 0));
+        test6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test6.setText("0");
+        test6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test6MouseMoved(evt);
+            }
+        });
+        test6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test6MouseExited(evt);
+            }
+        });
+        test6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test6ActionPerformed(evt);
+            }
+        });
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 640, 70, 40));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(test6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(test6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 660, 80, 40));
+
+        jPanel11.setBackground(new java.awt.Color(102, 153, 0));
+
+        test7.setBackground(new java.awt.Color(0, 204, 0));
+        test7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test7.setText("Results");
+        test7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test7MouseMoved(evt);
+            }
+        });
+        test7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test7MouseExited(evt);
+            }
+        });
+        test7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(test7, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(test7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 760, 430, 40));
 
         jButton10.setBackground(new java.awt.Color(152, 201, 45));
         jButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -859,16 +812,217 @@ public class PO9 extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 740, 190, 40));
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 810, 190, 40));
 
-        jPanel11.setBackground(new java.awt.Color(102, 153, 0));
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        cb47.setBackground(new java.awt.Color(0, 153, 102));
+        cb47.setForeground(new java.awt.Color(255, 255, 0));
+        cb47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cb47MouseExited(evt);
+            }
+        });
+        cb47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb47ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb47, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 460, -1, -1));
 
-        indeksTxt.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        indeksTxt.setText("INDEKS = ");
-        jPanel11.add(indeksTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        cb37.setBackground(new java.awt.Color(0, 153, 102));
+        cb37.setForeground(new java.awt.Color(255, 255, 0));
+        cb37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb37ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 460, -1, -1));
 
-        jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 640, 70, 40));
+        cb27.setBackground(new java.awt.Color(0, 153, 102));
+        cb27.setForeground(new java.awt.Color(255, 255, 0));
+        cb27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb27ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 460, -1, -1));
+
+        cb17.setBackground(new java.awt.Color(0, 153, 102));
+        cb17.setForeground(new java.awt.Color(255, 255, 0));
+        cb17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb17ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 460, -1, -1));
+
+        jPanel14.setBackground(new java.awt.Color(102, 153, 0));
+
+        label2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        label2.setText("INDEKS =");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 660, 90, 40));
+
+        jLabel_inven57.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven57.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel_inven57.setText("Maturity Level");
+        jPanel1.add(jLabel_inven57, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 770, -1, -1));
+
+        jLabel_inven6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven6.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven6.setText("Apakah Pengujian dasar elemen pada sistem aplikasi telah menjelaskan resiko dan hubungan sebab akibatnya?");
+        jPanel1.add(jLabel_inven6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 1090, 50));
+
+        jLabel_inven12.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven12.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven12.setText("3 .");
+        jPanel1.add(jLabel_inven12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 40, 50));
+
+        jPanel6.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_inven44.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven44.setText("8 .");
+        jPanel6.add(jLabel_inven44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 33));
+
+        jLabel_inven45.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven45.setText(" melalui proses penentuan rencana strategi SI dan dalam pengawasan serta mekanisme evaluasi SI?");
+        jPanel6.add(jLabel_inven45, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 1090, 30));
+
+        jLabel_inven46.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven46.setText("Apakah Penilaian resiko sebagai suatu alat penting di dalam perancangan dan pengimplementasian pengendalian internal telah dilakukan ");
+        jPanel6.add(jLabel_inven46, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1090, 30));
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 1140, 80));
+
+        jPanel10.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_inven47.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven47.setText("2 .");
+        jPanel10.add(jLabel_inven47, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 33));
+
+        jLabel_inven48.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven48.setText("Lingkup dan batasan, serta metodologi yang akan digunakan?");
+        jPanel10.add(jLabel_inven48, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 1090, 30));
+
+        jLabel_inven49.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven49.setText("Apakah dalam menilai resiko sistem aplikasi telah dilakukan suatu pendekatan umum penilaian resiko aplikasi yang menentukan ruang ");
+        jPanel10.add(jLabel_inven49, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1090, 30));
+
+        jPanel1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1140, 80));
+
+        jLabel_inven7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven7.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven7.setText("Apakah ketentuan rencana kerja penanganan resiko sistem aplikasi telah memastikan pengendalian biaya yang efektif?");
+        jPanel1.add(jLabel_inven7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 1090, 50));
+
+        jLabel_inven13.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven13.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven13.setText("5 .");
+        jPanel1.add(jLabel_inven13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 40, 50));
+
+        jPanel15.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_inven50.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven50.setText("4 .");
+        jPanel15.add(jLabel_inven50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 33));
+
+        jLabel_inven51.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven51.setText("Apakah resiko sistem aplikasi yang telah diuji dihasilkan dari suatu pengukuran kuantitatif atau kualitatif melalui analisis resiko?");
+        jPanel15.add(jLabel_inven51, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1090, 30));
+
+        jPanel1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 1140, 40));
+
+        jLabel_inven8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven8.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven8.setText("Akademi, faktor ketidakpastian dan faktor efektifitas biaya penerapan pengamanan sistem dan pengendalian internalnya?");
+        jPanel1.add(jLabel_inven8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 1090, 50));
+
+        jLabel_inven14.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven14.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven14.setText("7 .");
+        jPanel1.add(jLabel_inven14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 40, 50));
+
+        jLabel_inven9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven9.setForeground(new java.awt.Color(169, 224, 49));
+        jLabel_inven9.setText("Apakah sisa resiko sistem aplikasi yang masih ada telah diterima dengan mempertimbangkan faktor efek dari resiko tersebut,faktor kebijakan");
+        jPanel1.add(jLabel_inven9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 1090, 50));
+
+        jPanel7.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_inven52.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven52.setText("2 .");
+        jPanel7.add(jLabel_inven52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 33));
+
+        jLabel_inven54.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven54.setText("Lingkup dan batasan, serta metodologi yang akan digunakan?");
+        jPanel7.add(jLabel_inven54, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 1090, 30));
+
+        jLabel_inven58.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel_inven58.setText("Apakah dalam menilai resiko sistem aplikasi telah dilakukan suatu pendekatan umum penilaian resiko aplikasi yang menentukan ruang ");
+        jPanel7.add(jLabel_inven58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 1090, 30));
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1140, 80));
+
+        cb48.setBackground(new java.awt.Color(0, 153, 102));
+        cb48.setForeground(new java.awt.Color(255, 255, 0));
+        cb48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cb48MouseExited(evt);
+            }
+        });
+        cb48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb48ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb48, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 530, -1, -1));
+
+        cb38.setBackground(new java.awt.Color(0, 153, 102));
+        cb38.setForeground(new java.awt.Color(255, 255, 0));
+        cb38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb38ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 530, -1, -1));
+
+        cb28.setBackground(new java.awt.Color(0, 153, 102));
+        cb28.setForeground(new java.awt.Color(255, 255, 0));
+        cb28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb28ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb28, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 530, -1, -1));
+
+        cb18.setBackground(new java.awt.Color(0, 153, 102));
+        cb18.setForeground(new java.awt.Color(255, 255, 0));
+        cb18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb18ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 530, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -880,7 +1034,7 @@ public class PO9 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
         );
 
         pack();
@@ -900,29 +1054,51 @@ public class PO9 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        int a;
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    private void cb11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb11ActionPerformed
+       if(cb11.isSelected()){
+            cb11d=1;
+            cb11.setSelected(true);
+        }else{
+            cb11d=0;
+            cb11.setSelected(false);
+        }
+    }//GEN-LAST:event_cb11ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    private void cb31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb31ActionPerformed
+          
+        if(cb31.isSelected()){
+            cb31b=1;
+            cb31.setSelected(true);
+        }else{
+            cb31b=0;
+            cb31.setSelected(false);
+        }
+    }//GEN-LAST:event_cb31ActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    private void cb21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb21ActionPerformed
+        if(cb21.isSelected()){
+            cb21c=1;
+            cb21.setSelected(true);
+        }else{
+            cb21c=0;
+            cb21.setSelected(false);
+        }
+    }//GEN-LAST:event_cb21ActionPerformed
 
-    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox13ActionPerformed
+    private void cb41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb41ActionPerformed
+        
+        if(cb41.isSelected()){
+            cb41a=1;
+            cb41.setSelected(true);
+        }else{
+            cb41a=0;
+            cb41.setSelected(false);
+        }
+    }//GEN-LAST:event_cb41ActionPerformed
 
     private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
         // TODO add your handling code here:
@@ -940,121 +1116,205 @@ public class PO9 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox17ActionPerformed
 
-    private void jCheckBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox18ActionPerformed
+    private void cb43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb43ActionPerformed
+          if(cb43.isSelected()){
+            cb43a=1;
+            cb43.setSelected(true);
+        }else{
+            cb43a=0;
+            cb43.setSelected(false);
+        }
+    }//GEN-LAST:event_cb43ActionPerformed
 
-    private void jCheckBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox19ActionPerformed
+    private void cb33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb33ActionPerformed
+          if(cb33.isSelected()){
+            cb33b=1;
+            cb33.setSelected(true);
+        }else{
+            cb33b=0;
+            cb33.setSelected(false);
+        }
+    }//GEN-LAST:event_cb33ActionPerformed
 
-    private void jCheckBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox20ActionPerformed
+    private void cb23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb23ActionPerformed
+            if(cb23.isSelected()){
+            cb23c=1;
+            cb23.setSelected(true);
+        }else{
+            cb23c=0;
+            cb23.setSelected(false);
+        }
+    }//GEN-LAST:event_cb23ActionPerformed
 
-    private void jCheckBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox21ActionPerformed
+    private void cb13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb13ActionPerformed
+         if(cb13.isSelected()){
+            cb13d=1;
+            cb13.setSelected(true);
+        }else{
+            cb13d=0;
+            cb13.setSelected(false);
+        }
+    }//GEN-LAST:event_cb13ActionPerformed
 
-    private void jCheckBox26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox26ActionPerformed
+    private void cb45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb45ActionPerformed
+        if(cb45.isSelected()){
+            cb45a=1;
+            cb45.setSelected(true);
+        }else{
+            cb45a=0;
+            cb45.setSelected(false);
+        }
+    }//GEN-LAST:event_cb45ActionPerformed
 
-    private void jCheckBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox27ActionPerformed
+    private void cb35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb35ActionPerformed
+          if(cb35.isSelected()){
+            cb35b=1;
+            cb35.setSelected(true);
+        }else{
+            cb35b=0;
+            cb35.setSelected(false);
+        }
+    }//GEN-LAST:event_cb35ActionPerformed
 
-    private void jCheckBox28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox28ActionPerformed
+    private void cb25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb25ActionPerformed
+             if(cb25.isSelected()){
+            cb25c=1;
+            cb25.setSelected(true);
+        }else{
+            cb25c=0;
+            cb25.setSelected(false);
+        }
+    }//GEN-LAST:event_cb25ActionPerformed
 
-    private void jCheckBox29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox29ActionPerformed
+    private void cb15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb15ActionPerformed
+         if(cb15.isSelected()){
+            cb15d=1;
+            cb15.setSelected(true);
+        }else{
+            cb15d=0;
+            cb15.setSelected(false);
+        }
+    }//GEN-LAST:event_cb15ActionPerformed
 
-    private void jCheckBox34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox34ActionPerformed
+    private void cb46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb46ActionPerformed
+        if(cb46.isSelected()){
+            cb46a=1;
+            cb46.setSelected(true);
+        }else{
+            cb46a=0;
+            cb46.setSelected(false);
+        }
+    }//GEN-LAST:event_cb46ActionPerformed
 
-    private void jCheckBox35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox35ActionPerformed
+    private void cb36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb36ActionPerformed
+          if(cb36.isSelected()){
+            cb36b=1;
+            cb36.setSelected(true);
+        }else{
+            cb36b=0;
+            cb36.setSelected(false);
+        }
+    }//GEN-LAST:event_cb36ActionPerformed
 
-    private void jCheckBox36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox36ActionPerformed
+    private void cb26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb26ActionPerformed
+             if(cb26.isSelected()){
+            cb26c=1;
+            cb26.setSelected(true);
+        }else{
+            cb26c=0;
+            cb26.setSelected(false);
+        }
+    }//GEN-LAST:event_cb26ActionPerformed
 
-    private void jCheckBox37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox37ActionPerformed
+    private void cb16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb16ActionPerformed
+         if(cb16.isSelected()){
+            cb16d=1;
+            cb16.setSelected(true);
+        }else{
+            cb16d=0;
+            cb16.setSelected(false);
+        }
+    }//GEN-LAST:event_cb16ActionPerformed
 
-    private void jCheckBox42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox42ActionPerformed
+    private void cb44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb44ActionPerformed
+         if(cb44.isSelected()){
+            cb44a=1;
+            cb44.setSelected(true);
+        }else{
+            cb44a=0;
+            cb44.setSelected(false);
+        }
+    }//GEN-LAST:event_cb44ActionPerformed
 
-    private void jCheckBox43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox43ActionPerformed
+    private void cb34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb34ActionPerformed
+         if(cb34.isSelected()){
+            cb34b=1;
+            cb34.setSelected(true);
+        }else{
+            cb34b=0;
+            cb34.setSelected(false);
+        }
+    }//GEN-LAST:event_cb34ActionPerformed
 
-    private void jCheckBox44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox44ActionPerformed
+    private void cb24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb24ActionPerformed
+             if(cb24.isSelected()){
+            cb24c=1;
+            cb24.setSelected(true);
+        }else{
+            cb24c=0;
+            cb24.setSelected(false);
+        }
+    }//GEN-LAST:event_cb24ActionPerformed
 
-    private void jCheckBox45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox45ActionPerformed
+    private void cb14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb14ActionPerformed
+         if(cb14.isSelected()){
+            cb14d=1;
+            cb14.setSelected(true);
+        }else{
+            cb14d=0;
+            cb14.setSelected(false);
+        }
+    }//GEN-LAST:event_cb14ActionPerformed
 
-    private void jCheckBox46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox46ActionPerformed
+    private void cb42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb42ActionPerformed
+         if(cb42.isSelected()){
+            cb42a=1;
+            cb42.setSelected(true);
+        }else{
+            cb42a=0;
+            cb42.setSelected(false);
+        }
+    }//GEN-LAST:event_cb42ActionPerformed
 
-    private void jCheckBox47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox47ActionPerformed
+    private void cb32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb32ActionPerformed
+         if(cb32.isSelected()){
+            cb32b=1;
+            cb32.setSelected(true);
+        }else{
+            cb32b=0;
+            cb32.setSelected(false);
+        }
+    }//GEN-LAST:event_cb32ActionPerformed
 
-    private void jCheckBox48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox48ActionPerformed
+    private void cb22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb22ActionPerformed
+        if(cb22.isSelected()){
+            cb22c=1;
+            cb22.setSelected(true);
+        }else{
+            cb22c=0;
+            cb22.setSelected(false);
+        }
+    }//GEN-LAST:event_cb22ActionPerformed
 
-    private void jCheckBox49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox49ActionPerformed
-
-    private void jCheckBox50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox50ActionPerformed
-
-    private void jCheckBox51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox51ActionPerformed
-
-    private void jCheckBox52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox52ActionPerformed
-
-    private void jCheckBox53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox53ActionPerformed
-
-    private void jCheckBox54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox54ActionPerformed
-
-    private void jCheckBox58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox58ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox58ActionPerformed
-
-    private void jCheckBox59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox59ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox59ActionPerformed
-
-    private void jCheckBox60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox60ActionPerformed
-
-    private void jCheckBox61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox61ActionPerformed
+    private void cb12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb12ActionPerformed
+         if(cb12.isSelected()){
+            cb12d=1;
+            cb12.setSelected(true);
+        }else{
+            cb12d=0;
+            cb12.setSelected(false);
+        }
+    }//GEN-LAST:event_cb12ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         AI2 fa = new AI2();
@@ -1062,6 +1322,225 @@ public class PO9 extends javax.swing.JFrame {
         fa.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void cb47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb47ActionPerformed
+        if(cb47.isSelected()){
+            cb47a=1;
+            cb47.setSelected(true);
+        }else{
+            cb47a=0;
+            cb47.setSelected(false);
+        }
+    }//GEN-LAST:event_cb47ActionPerformed
+
+    private void cb37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb37ActionPerformed
+          if(cb37.isSelected()){
+            cb37b=1;
+            cb37.setSelected(true);
+        }else{
+            cb37b=0;
+            cb37.setSelected(false);
+        }
+    }//GEN-LAST:event_cb37ActionPerformed
+
+    private void cb27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb27ActionPerformed
+             if(cb27.isSelected()){
+            cb27c=1;
+            cb27.setSelected(true);
+        }else{
+            cb27c=0;
+            cb27.setSelected(false);
+        }
+    }//GEN-LAST:event_cb27ActionPerformed
+
+    private void cb17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb17ActionPerformed
+         if(cb17.isSelected()){
+            cb17d=1;
+            cb17.setSelected(true);
+        }else{
+            cb17d=0;
+            cb17.setSelected(false);
+        }
+    }//GEN-LAST:event_cb17ActionPerformed
+
+    private void test1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test1ActionPerformed
+       
+    }//GEN-LAST:event_test1ActionPerformed
+
+    private void test1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test1MouseExited
+     
+        a = cb41a+cb42a+cb43a+cb44a+cb45a+cb46a+cb47a+cb48a;
+        a1 = a * 4;
+        
+        test1.setText(Integer.toString(a));
+    }//GEN-LAST:event_test1MouseExited
+
+    private void test1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test1MouseMoved
+        
+    }//GEN-LAST:event_test1MouseMoved
+
+    private void test2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test2MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test2MouseMoved
+
+    private void test2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test2MouseExited
+       int b;
+        b = cb31b+cb32b+cb33b+cb34b+cb35b+cb36b+cb37b+cb38b;
+        a2 = b*3;
+        test2.setText(Integer.toString(b));
+    }//GEN-LAST:event_test2MouseExited
+
+    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test2ActionPerformed
+
+    private void test3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test3MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test3MouseMoved
+
+    private void test3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test3MouseExited
+        int c;
+        c = cb21c+cb22c+cb23c+cb24c+cb25c+cb26c+cb27c+cb28c;
+        a3=c*2;
+        test3.setText(Integer.toString(c));
+    }//GEN-LAST:event_test3MouseExited
+
+    private void test3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test3ActionPerformed
+
+    private void test4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test4MouseMoved
+
+    private void test4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test4MouseExited
+         int d;
+        d = cb11d+cb12d+cb13d+cb14d+cb15d+cb16d+cb17d+cb18d;
+        a4 = d*1;
+        test4.setText(Integer.toString(d));
+    }//GEN-LAST:event_test4MouseExited
+
+    private void test4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test4ActionPerformed
+
+    private void test5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test5MouseMoved
+
+    private void test5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseExited
+       
+        
+        e=a1+a2+a3+a4;
+        
+        test5.setText(Integer.toString(e));
+    }//GEN-LAST:event_test5MouseExited
+
+    private void test5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test5ActionPerformed
+        
+    }//GEN-LAST:event_test5ActionPerformed
+
+    private void test6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test6MouseMoved
+
+    private void test6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseExited
+        DecimalFormat formatData = new DecimalFormat("#.##");
+       double y;
+       
+       y=(double)e/7;
+       
+        f = Double.valueOf(formatData.format(y));
+        test6.setText(Double.toString(f));
+        
+        if (f < 0.5){
+            test7.setText("Non Existent");
+        }else{
+            if(f >0.52 && f <1.5){
+                test7.setText("Intial/Ad Hoc");
+            }else{
+                if(f >1.51 && f<2.5){
+                    test7.setText("Repeatable but Intuitive");
+                }else{
+                    if(f>2.51 && f<3.50){
+                        test7.setText("Defined Process");
+                    }else{
+                        if(f>3.51 && f<4.5){
+                            test7.setText("Managed And Measurable");
+                        }else{
+                            if(f>4.51){
+                                test7.setText("Optimized");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_test6MouseExited
+
+    private void test6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test6ActionPerformed
+
+    private void test7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test7MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test7MouseMoved
+
+    private void test7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test7MouseExited
+        
+    }//GEN-LAST:event_test7MouseExited
+
+    private void test7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test7ActionPerformed
+
+    private void cb48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb48ActionPerformed
+         if(cb48.isSelected()){
+            cb48a=1;
+            cb48.setSelected(true);
+        }else{
+            cb48a=0;
+            cb48.setSelected(false);
+        }
+    }//GEN-LAST:event_cb48ActionPerformed
+
+    private void cb38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb38ActionPerformed
+       if(cb38.isSelected()){
+            cb38b=1;
+            cb38.setSelected(true);
+        }else{
+            cb38b=0;
+            cb38.setSelected(false);
+        }
+    }//GEN-LAST:event_cb38ActionPerformed
+
+    private void cb28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb28ActionPerformed
+         if(cb28.isSelected()){
+            cb28c=1;
+            cb28.setSelected(true);
+        }else{
+            cb28c=0;
+            cb28.setSelected(false);
+        }
+    }//GEN-LAST:event_cb28ActionPerformed
+
+    private void cb18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb18ActionPerformed
+        if(cb18.isSelected()){
+            cb18d=1;
+            cb18.setSelected(true);
+        }else{
+            cb18d=0;
+            cb18.setSelected(false);
+        }
+    }//GEN-LAST:event_cb18ActionPerformed
+
+    private void cb47MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb47MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb47MouseExited
+
+    private void cb48MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb48MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb48MouseExited
 
     /**
      * @param args the command line arguments
@@ -1096,6 +1575,30 @@ public class PO9 extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1106,75 +1609,64 @@ public class PO9 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Label indeksTxt;
+    private javax.swing.JCheckBox cb11;
+    private javax.swing.JCheckBox cb12;
+    private javax.swing.JCheckBox cb13;
+    private javax.swing.JCheckBox cb14;
+    private javax.swing.JCheckBox cb15;
+    private javax.swing.JCheckBox cb16;
+    private javax.swing.JCheckBox cb17;
+    private javax.swing.JCheckBox cb18;
+    private javax.swing.JCheckBox cb21;
+    private javax.swing.JCheckBox cb22;
+    private javax.swing.JCheckBox cb23;
+    private javax.swing.JCheckBox cb24;
+    private javax.swing.JCheckBox cb25;
+    private javax.swing.JCheckBox cb26;
+    private javax.swing.JCheckBox cb27;
+    private javax.swing.JCheckBox cb28;
+    private javax.swing.JCheckBox cb31;
+    private javax.swing.JCheckBox cb32;
+    private javax.swing.JCheckBox cb33;
+    private javax.swing.JCheckBox cb34;
+    private javax.swing.JCheckBox cb35;
+    private javax.swing.JCheckBox cb36;
+    private javax.swing.JCheckBox cb37;
+    private javax.swing.JCheckBox cb38;
+    private javax.swing.JCheckBox cb41;
+    private javax.swing.JCheckBox cb42;
+    private javax.swing.JCheckBox cb43;
+    private javax.swing.JCheckBox cb44;
+    private javax.swing.JCheckBox cb45;
+    private javax.swing.JCheckBox cb46;
+    private javax.swing.JCheckBox cb47;
+    private javax.swing.JCheckBox cb48;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox13;
     private javax.swing.JCheckBox jCheckBox14;
     private javax.swing.JCheckBox jCheckBox15;
     private javax.swing.JCheckBox jCheckBox16;
     private javax.swing.JCheckBox jCheckBox17;
-    private javax.swing.JCheckBox jCheckBox18;
-    private javax.swing.JCheckBox jCheckBox19;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox20;
-    private javax.swing.JCheckBox jCheckBox21;
-    private javax.swing.JCheckBox jCheckBox26;
-    private javax.swing.JCheckBox jCheckBox27;
-    private javax.swing.JCheckBox jCheckBox28;
-    private javax.swing.JCheckBox jCheckBox29;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox34;
-    private javax.swing.JCheckBox jCheckBox35;
-    private javax.swing.JCheckBox jCheckBox36;
-    private javax.swing.JCheckBox jCheckBox37;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox42;
-    private javax.swing.JCheckBox jCheckBox43;
-    private javax.swing.JCheckBox jCheckBox44;
-    private javax.swing.JCheckBox jCheckBox45;
-    private javax.swing.JCheckBox jCheckBox46;
-    private javax.swing.JCheckBox jCheckBox47;
-    private javax.swing.JCheckBox jCheckBox48;
-    private javax.swing.JCheckBox jCheckBox49;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox50;
-    private javax.swing.JCheckBox jCheckBox51;
-    private javax.swing.JCheckBox jCheckBox52;
-    private javax.swing.JCheckBox jCheckBox53;
-    private javax.swing.JCheckBox jCheckBox54;
-    private javax.swing.JCheckBox jCheckBox58;
-    private javax.swing.JCheckBox jCheckBox59;
-    private javax.swing.JCheckBox jCheckBox60;
-    private javax.swing.JCheckBox jCheckBox61;
     private javax.swing.JLabel jLabel_inven10;
     private javax.swing.JLabel jLabel_inven11;
-    private javax.swing.JLabel jLabel_inven15;
-    private javax.swing.JLabel jLabel_inven16;
+    private javax.swing.JLabel jLabel_inven12;
+    private javax.swing.JLabel jLabel_inven13;
+    private javax.swing.JLabel jLabel_inven14;
     private javax.swing.JLabel jLabel_inven17;
     private javax.swing.JLabel jLabel_inven18;
     private javax.swing.JLabel jLabel_inven2;
     private javax.swing.JLabel jLabel_inven21;
-    private javax.swing.JLabel jLabel_inven22;
-    private javax.swing.JLabel jLabel_inven23;
     private javax.swing.JLabel jLabel_inven24;
-    private javax.swing.JLabel jLabel_inven27;
-    private javax.swing.JLabel jLabel_inven28;
-    private javax.swing.JLabel jLabel_inven29;
-    private javax.swing.JLabel jLabel_inven32;
     private javax.swing.JLabel jLabel_inven33;
     private javax.swing.JLabel jLabel_inven34;
-    private javax.swing.JLabel jLabel_inven35;
-    private javax.swing.JLabel jLabel_inven38;
-    private javax.swing.JLabel jLabel_inven39;
     private javax.swing.JLabel jLabel_inven40;
-    private javax.swing.JLabel jLabel_inven41;
-    private javax.swing.JLabel jLabel_inven42;
+    private javax.swing.JLabel jLabel_inven43;
     private javax.swing.JLabel jLabel_inven44;
     private javax.swing.JLabel jLabel_inven45;
     private javax.swing.JLabel jLabel_inven46;
+    private javax.swing.JLabel jLabel_inven47;
     private javax.swing.JLabel jLabel_inven48;
     private javax.swing.JLabel jLabel_inven49;
     private javax.swing.JLabel jLabel_inven5;
@@ -1184,21 +1676,37 @@ public class PO9 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_inven53;
     private javax.swing.JLabel jLabel_inven54;
     private javax.swing.JLabel jLabel_inven55;
+    private javax.swing.JLabel jLabel_inven56;
+    private javax.swing.JLabel jLabel_inven57;
+    private javax.swing.JLabel jLabel_inven58;
+    private javax.swing.JLabel jLabel_inven6;
+    private javax.swing.JLabel jLabel_inven7;
+    private javax.swing.JLabel jLabel_inven8;
+    private javax.swing.JLabel jLabel_inven9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JLabel jnb;
+    private java.awt.Label label2;
+    private java.awt.Label label3;
     private java.awt.Label label8;
+    private javax.swing.JTextField test1;
+    private javax.swing.JTextField test2;
+    private javax.swing.JTextField test3;
+    private javax.swing.JTextField test4;
+    private javax.swing.JTextField test5;
+    private javax.swing.JTextField test6;
+    private javax.swing.JTextField test7;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,6 +7,7 @@
 package auditapp;
 
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -22,9 +23,11 @@ public class AI2 extends javax.swing.JFrame {
     
     
     int a, b, c, d, e;
+   
     
     int a1,a2,a3,a4;
     
+
     double f;
 
     /**
@@ -292,7 +295,7 @@ public class AI2 extends javax.swing.JFrame {
         jLabel_inven33.setText("TS");
 
         jLabel_inven34.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        jLabel_inven34.setText("Skala");
+        jLabel_inven34.setText("Bobot");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -586,9 +589,9 @@ public class AI2 extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 941, Short.MAX_VALUE)
-                .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(211, 211, 211))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 915, Short.MAX_VALUE)
+                .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(199, 199, 199))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -845,8 +848,8 @@ public class AI2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(test6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(test6, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -855,7 +858,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 500, 60, 40));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 500, 80, 40));
 
         jPanel11.setBackground(new java.awt.Color(102, 153, 0));
 
@@ -1269,7 +1272,10 @@ public class AI2 extends javax.swing.JFrame {
     }//GEN-LAST:event_cb12ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        ME2 fa = new ME2();
+        fa.setLocationRelativeTo(null);
+        fa.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void cb47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb47ActionPerformed
@@ -1394,9 +1400,12 @@ public class AI2 extends javax.swing.JFrame {
     }//GEN-LAST:event_test6MouseMoved
 
     private void test6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseExited
-        double f;
-        f = e/7;
-        
+        DecimalFormat formatData = new DecimalFormat("#.##");
+       double y;
+       
+       y=(double)e/7;
+       
+        f = Double.valueOf(formatData.format(y));
         test6.setText(Double.toString(f));
         
         if (f < 0.5){

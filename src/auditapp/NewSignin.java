@@ -93,7 +93,7 @@ public class NewSignin extends javax.swing.JFrame {
 
         username.setBackground(new java.awt.Color(31, 36, 42));
         username.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setForeground(new java.awt.Color(153, 204, 0));
         username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         username.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -187,7 +187,7 @@ public class NewSignin extends javax.swing.JFrame {
 
         nama_lengkap.setBackground(new java.awt.Color(31, 36, 42));
         nama_lengkap.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        nama_lengkap.setForeground(new java.awt.Color(255, 255, 255));
+        nama_lengkap.setForeground(new java.awt.Color(102, 204, 0));
         nama_lengkap.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         nama_lengkap.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -198,7 +198,7 @@ public class NewSignin extends javax.swing.JFrame {
 
         usrname.setBackground(new java.awt.Color(31, 36, 42));
         usrname.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        usrname.setForeground(new java.awt.Color(255, 255, 255));
+        usrname.setForeground(new java.awt.Color(102, 204, 0));
         usrname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         usrname.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -265,13 +265,13 @@ public class NewSignin extends javax.swing.JFrame {
 
         pw2.setBackground(new java.awt.Color(31, 36, 42));
         pw2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        pw2.setForeground(new java.awt.Color(255, 255, 255));
+        pw2.setForeground(new java.awt.Color(102, 204, 0));
         pw2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         jPanel6.add(pw2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 330, 40));
 
         pw1.setBackground(new java.awt.Color(31, 36, 42));
         pw1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        pw1.setForeground(new java.awt.Color(255, 255, 255));
+        pw1.setForeground(new java.awt.Color(102, 204, 0));
         pw1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         jPanel6.add(pw1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 330, 40));
 
@@ -300,7 +300,7 @@ public class NewSignin extends javax.swing.JFrame {
 
         pw.setBackground(new java.awt.Color(31, 36, 42));
         pw.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        pw.setForeground(new java.awt.Color(255, 255, 255));
+        pw.setForeground(new java.awt.Color(153, 204, 0));
         pw.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         jPanel1.add(pw, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 305, 260, 40));
 

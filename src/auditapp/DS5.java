@@ -31,7 +31,7 @@ public class DS5 extends javax.swing.JFrame {
     /**
      * Creates new form NewSignin
      */
-    public DS5() {
+    public DS5(String jme, String ime, String y1, String y2, String y3, String y4) {
         initComponents();
         this.setLocationRelativeTo(null);
       
@@ -45,7 +45,15 @@ public class DS5 extends javax.swing.JFrame {
             System.err.println(ex);
         }
         
+         x1.setText(jme);
+         x2.setText(ime);
+         x3.setText(y1);
+         x4.setText(y2);
+         x5.setText(y3);
+         x6.setText(y4);
     }
+
+ 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -92,7 +100,7 @@ public class DS5 extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         jPanel13 = new javax.swing.JPanel();
         jLabel_inven55 = new javax.swing.JLabel();
-        test5 = new javax.swing.JTextField();
+        jds = new javax.swing.JTextField();
         cb11 = new javax.swing.JCheckBox();
         cb31 = new javax.swing.JCheckBox();
         cb21 = new javax.swing.JCheckBox();
@@ -118,7 +126,7 @@ public class DS5 extends javax.swing.JFrame {
         cb22 = new javax.swing.JCheckBox();
         cb12 = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
-        test6 = new javax.swing.JTextField();
+        ids = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
         test7 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
@@ -164,6 +172,12 @@ public class DS5 extends javax.swing.JFrame {
         cb40 = new javax.swing.JCheckBox();
         cb30 = new javax.swing.JCheckBox();
         cb20 = new javax.swing.JCheckBox();
+        x1 = new javax.swing.JTextField();
+        x2 = new javax.swing.JTextField();
+        x3 = new javax.swing.JTextField();
+        x4 = new javax.swing.JTextField();
+        x5 = new javax.swing.JTextField();
+        x6 = new javax.swing.JTextField();
 
         jCheckBox3.setBackground(new java.awt.Color(0, 153, 102));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 0));
@@ -212,7 +226,7 @@ public class DS5 extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(21, 25, 28));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setInheritsPopupMenu(true);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -225,12 +239,12 @@ public class DS5 extends javax.swing.JFrame {
         jLabel_inven2.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         jLabel_inven2.setForeground(new java.awt.Color(169, 224, 49));
         jLabel_inven2.setText("Deliver and Support 5 (Ensure System Security)");
-        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1180, 50));
+        jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 940, 50));
 
         jLabel_inven5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven5.setForeground(new java.awt.Color(169, 224, 49));
         jLabel_inven5.setText("Apakah Setiap user dalam penggunaan komputer melakukan login terlebih dahulu?");
-        jPanel1.add(jLabel_inven5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 1090, 50));
+        jPanel1.add(jLabel_inven5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 910, 50));
 
         jButton8.setBackground(new java.awt.Color(152, 201, 45));
         jButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -444,7 +458,7 @@ public class DS5 extends javax.swing.JFrame {
         jLabel_inven53.setText("Jumlah Pertanyaan");
 
         label3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        label3.setText("8");
+        label3.setText("10");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -452,7 +466,7 @@ public class DS5 extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addComponent(jLabel_inven53, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 935, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 922, Short.MAX_VALUE)
                 .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
         );
@@ -473,23 +487,23 @@ public class DS5 extends javax.swing.JFrame {
         jLabel_inven55.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven55.setText("Jumlah Nilai Jawaban");
 
-        test5.setBackground(new java.awt.Color(0, 204, 0));
-        test5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        test5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        test5.setText("0");
-        test5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jds.setBackground(new java.awt.Color(0, 204, 0));
+        jds.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jds.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jds.setText("0");
+        jds.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                test5MouseMoved(evt);
+                jdsMouseMoved(evt);
             }
         });
-        test5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jds.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                test5MouseExited(evt);
+                jdsMouseExited(evt);
             }
         });
-        test5.addActionListener(new java.awt.event.ActionListener() {
+        jds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test5ActionPerformed(evt);
+                jdsActionPerformed(evt);
             }
         });
 
@@ -500,7 +514,7 @@ public class DS5 extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 941, Short.MAX_VALUE)
-                .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jds, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(211, 211, 211))
         );
         jPanel13Layout.setVerticalGroup(
@@ -508,7 +522,7 @@ public class DS5 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jds, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -732,23 +746,23 @@ public class DS5 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 0));
 
-        test6.setBackground(new java.awt.Color(0, 204, 0));
-        test6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        test6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        test6.setText("0");
-        test6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        ids.setBackground(new java.awt.Color(0, 204, 0));
+        ids.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ids.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ids.setText("0");
+        ids.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                test6MouseMoved(evt);
+                idsMouseMoved(evt);
             }
         });
-        test6.addMouseListener(new java.awt.event.MouseAdapter() {
+        ids.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                test6MouseExited(evt);
+                idsMouseExited(evt);
             }
         });
-        test6.addActionListener(new java.awt.event.ActionListener() {
+        ids.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test6ActionPerformed(evt);
+                idsActionPerformed(evt);
             }
         });
 
@@ -758,13 +772,13 @@ public class DS5 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(test6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
+                .addComponent(ids, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(test6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ids, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 660, 80, 40));
@@ -1121,13 +1135,145 @@ public class DS5 extends javax.swing.JFrame {
         });
         jPanel1.add(cb20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 550, -1, -1));
 
+        x1.setBackground(new java.awt.Color(0, 0, 0));
+        x1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x1.setText("0");
+        x1.setBorder(null);
+        x1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x1MouseMoved(evt);
+            }
+        });
+        x1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x1MouseExited(evt);
+            }
+        });
+        x1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 160, 50, -1));
+
+        x2.setBackground(new java.awt.Color(0, 0, 0));
+        x2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x2.setText("0");
+        x2.setBorder(null);
+        x2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x2MouseMoved(evt);
+            }
+        });
+        x2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x2MouseExited(evt);
+            }
+        });
+        x2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 160, 50, -1));
+
+        x3.setBackground(new java.awt.Color(0, 0, 0));
+        x3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x3.setText("0");
+        x3.setBorder(null);
+        x3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x3MouseMoved(evt);
+            }
+        });
+        x3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x3MouseExited(evt);
+            }
+        });
+        x3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 210, 50, -1));
+
+        x4.setBackground(new java.awt.Color(0, 0, 0));
+        x4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x4.setText("0");
+        x4.setBorder(null);
+        x4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x4MouseMoved(evt);
+            }
+        });
+        x4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x4MouseExited(evt);
+            }
+        });
+        x4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 210, 50, -1));
+
+        x5.setBackground(new java.awt.Color(0, 0, 0));
+        x5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x5.setText("0");
+        x5.setBorder(null);
+        x5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x5MouseMoved(evt);
+            }
+        });
+        x5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x5MouseExited(evt);
+            }
+        });
+        x5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 260, 50, -1));
+
+        x6.setBackground(new java.awt.Color(0, 0, 0));
+        x6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        x6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x6.setText("0");
+        x6.setBorder(null);
+        x6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                x6MouseMoved(evt);
+            }
+        });
+        x6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                x6MouseExited(evt);
+            }
+        });
+        x6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                x6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(x6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 260, 50, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1644, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1138,10 +1284,7 @@ public class DS5 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        AI2 fa = new AI2();
-        fa.setLocationRelativeTo(null);
-        fa.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -1414,7 +1557,7 @@ public class DS5 extends javax.swing.JFrame {
     }//GEN-LAST:event_cb12ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        AI2 fa = new AI2();
+        RID fa = new RID(jds.getText(), ids.getText(), x1.getText(), x2.getText(),x3.getText(),x4.getText(),x5.getText(),x6.getText());
         fa.setLocationRelativeTo(null);
         fa.setVisible(true);
         this.dispose();
@@ -1521,34 +1664,34 @@ public class DS5 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_test4ActionPerformed
 
-    private void test5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseMoved
+    private void jdsMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jdsMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_test5MouseMoved
+    }//GEN-LAST:event_jdsMouseMoved
 
-    private void test5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseExited
+    private void jdsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jdsMouseExited
        
         
         e=a1+a2+a3+a4;
         
-        test5.setText(Integer.toString(e));
-    }//GEN-LAST:event_test5MouseExited
+        jds.setText(Integer.toString(e));
+    }//GEN-LAST:event_jdsMouseExited
 
-    private void test5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test5ActionPerformed
+    private void jdsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdsActionPerformed
         
-    }//GEN-LAST:event_test5ActionPerformed
+    }//GEN-LAST:event_jdsActionPerformed
 
-    private void test6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseMoved
+    private void idsMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idsMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_test6MouseMoved
+    }//GEN-LAST:event_idsMouseMoved
 
-    private void test6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseExited
+    private void idsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_idsMouseExited
         DecimalFormat formatData = new DecimalFormat("#.##");
        double y;
        
-       y=(double)e/7;
+       y=(double)e/10;
        
         f = Double.valueOf(formatData.format(y));
-        test6.setText(Double.toString(f));
+        ids.setText(Double.toString(f));
         
         if (f < 0.5){
             test7.setText("Non Existent");
@@ -1573,11 +1716,11 @@ public class DS5 extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_test6MouseExited
+    }//GEN-LAST:event_idsMouseExited
 
-    private void test6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test6ActionPerformed
+    private void idsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_test6ActionPerformed
+    }//GEN-LAST:event_idsActionPerformed
 
     private void test7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test7MouseMoved
         // TODO add your handling code here:
@@ -1727,103 +1870,82 @@ public class DS5 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_cb20ActionPerformed
 
+    private void x1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x1MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x1MouseMoved
+
+    private void x1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x1MouseExited
+
+    private void x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x1ActionPerformed
+
+    private void x2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x2MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x2MouseMoved
+
+    private void x2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x2MouseExited
+
+    private void x2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x2ActionPerformed
+
+    private void x3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x3MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x3MouseMoved
+
+    private void x3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x3MouseExited
+
+    private void x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x3ActionPerformed
+
+    private void x4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x4MouseMoved
+
+    private void x4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x4MouseExited
+
+    private void x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x4ActionPerformed
+
+    private void x5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x5MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x5MouseMoved
+
+    private void x5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x5MouseExited
+
+    private void x5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x5ActionPerformed
+
+    private void x6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x6MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x6MouseMoved
+
+    private void x6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_x6MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x6MouseExited
+
+    private void x6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_x6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DS5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DS5().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox cb11;
@@ -1866,6 +1988,7 @@ public class DS5 extends javax.swing.JFrame {
     private javax.swing.JCheckBox cb48;
     private javax.swing.JCheckBox cb49;
     private javax.swing.JCheckBox cb50;
+    private javax.swing.JTextField ids;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -1924,6 +2047,7 @@ public class DS5 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jds;
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label8;
@@ -1931,8 +2055,12 @@ public class DS5 extends javax.swing.JFrame {
     private javax.swing.JTextField test2;
     private javax.swing.JTextField test3;
     private javax.swing.JTextField test4;
-    private javax.swing.JTextField test5;
-    private javax.swing.JTextField test6;
     private javax.swing.JTextField test7;
+    private javax.swing.JTextField x1;
+    private javax.swing.JTextField x2;
+    private javax.swing.JTextField x3;
+    private javax.swing.JTextField x4;
+    private javax.swing.JTextField x5;
+    private javax.swing.JTextField x6;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,14 +2,11 @@
 
 package audit;
 
+import auditapp.PO9;
 import javax.swing.UIManager;
 
 
 public class InventorySoftware{
 
-    
-    public static void main(String[] args) {
-        
-    }
     
 }

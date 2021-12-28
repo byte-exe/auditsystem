@@ -33,7 +33,7 @@ public class ME2 extends javax.swing.JFrame {
     /**
      * Creates new form NewSignin
      */
-    public ME2() {
+    public ME2(String jaci, String iaci, String aa, String bb) {
         initComponents();
         this.setLocationRelativeTo(null);
       
@@ -46,7 +46,11 @@ public class ME2 extends javax.swing.JFrame {
         catch (Exception ex) {
             System.err.println(ex);
         }
+        y1.setText(jaci);
+        y2.setText(iaci);
         
+        y3.setText(aa);
+        y4.setText(bb);
     }
 
     /**
@@ -70,7 +74,6 @@ public class ME2 extends javax.swing.JFrame {
         jLabel_inven2 = new javax.swing.JLabel();
         jLabel_inven5 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
         jLabel_inven11 = new javax.swing.JLabel();
         jLabel_inven15 = new javax.swing.JLabel();
         jLabel_inven16 = new javax.swing.JLabel();
@@ -99,7 +102,7 @@ public class ME2 extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         jPanel13 = new javax.swing.JPanel();
         jLabel_inven55 = new javax.swing.JLabel();
-        test5 = new javax.swing.JTextField();
+        jme = new javax.swing.JTextField();
         cb11 = new javax.swing.JCheckBox();
         cb31 = new javax.swing.JCheckBox();
         cb21 = new javax.swing.JCheckBox();
@@ -117,13 +120,17 @@ public class ME2 extends javax.swing.JFrame {
         cb22 = new javax.swing.JCheckBox();
         cb12 = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
-        test6 = new javax.swing.JTextField();
+        ime = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
         test7 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         label2 = new java.awt.Label();
         jLabel_inven57 = new javax.swing.JLabel();
+        y2 = new javax.swing.JTextField();
+        y1 = new javax.swing.JTextField();
+        y3 = new javax.swing.JTextField();
+        y4 = new javax.swing.JTextField();
 
         jCheckBox3.setBackground(new java.awt.Color(0, 153, 102));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 0));
@@ -172,7 +179,7 @@ public class ME2 extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(21, 25, 28));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setInheritsPopupMenu(true);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -205,20 +212,6 @@ public class ME2 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 110, 40));
-
-        jButton9.setBackground(new java.awt.Color(152, 201, 45));
-        jButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(21, 25, 28));
-        jButton9.setText("BACK");
-        jButton9.setBorder(null);
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton9.setFocusPainted(false);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 530, 190, 40));
 
         jLabel_inven11.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven11.setForeground(new java.awt.Color(169, 224, 49));
@@ -493,23 +486,23 @@ public class ME2 extends javax.swing.JFrame {
         jLabel_inven55.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven55.setText("Jumlah Nilai Jawaban");
 
-        test5.setBackground(new java.awt.Color(0, 204, 0));
-        test5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        test5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        test5.setText("0");
-        test5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jme.setBackground(new java.awt.Color(0, 204, 0));
+        jme.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jme.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jme.setText("0");
+        jme.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                test5MouseMoved(evt);
+                jmeMouseMoved(evt);
             }
         });
-        test5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jme.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                test5MouseExited(evt);
+                jmeMouseExited(evt);
             }
         });
-        test5.addActionListener(new java.awt.event.ActionListener() {
+        jme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test5ActionPerformed(evt);
+                jmeActionPerformed(evt);
             }
         });
 
@@ -520,7 +513,7 @@ public class ME2 extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 925, Short.MAX_VALUE)
-                .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jme, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(199, 199, 199))
         );
         jPanel13Layout.setVerticalGroup(
@@ -528,7 +521,7 @@ public class ME2 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(test5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jme, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -680,23 +673,23 @@ public class ME2 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 0));
 
-        test6.setBackground(new java.awt.Color(0, 204, 0));
-        test6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        test6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        test6.setText("0");
-        test6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        ime.setBackground(new java.awt.Color(0, 204, 0));
+        ime.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ime.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ime.setText("0");
+        ime.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                test6MouseMoved(evt);
+                imeMouseMoved(evt);
             }
         });
-        test6.addMouseListener(new java.awt.event.MouseAdapter() {
+        ime.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                test6MouseExited(evt);
+                imeMouseExited(evt);
             }
         });
-        test6.addActionListener(new java.awt.event.ActionListener() {
+        ime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test6ActionPerformed(evt);
+                imeActionPerformed(evt);
             }
         });
 
@@ -706,13 +699,13 @@ public class ME2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(test6, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                .addComponent(ime, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(test6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ime, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -801,6 +794,94 @@ public class ME2 extends javax.swing.JFrame {
         jLabel_inven57.setText("Maturity Level");
         jPanel1.add(jLabel_inven57, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 490, -1, -1));
 
+        y2.setBackground(new java.awt.Color(0, 0, 0));
+        y2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        y2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        y2.setText("0");
+        y2.setBorder(null);
+        y2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                y2MouseMoved(evt);
+            }
+        });
+        y2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                y2MouseExited(evt);
+            }
+        });
+        y2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                y2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(y2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 530, 40, 30));
+
+        y1.setBackground(new java.awt.Color(0, 0, 0));
+        y1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        y1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        y1.setText("0");
+        y1.setBorder(null);
+        y1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                y1MouseMoved(evt);
+            }
+        });
+        y1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                y1MouseExited(evt);
+            }
+        });
+        y1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                y1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(y1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 530, 40, 30));
+
+        y3.setBackground(new java.awt.Color(0, 0, 0));
+        y3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        y3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        y3.setText("0");
+        y3.setBorder(null);
+        y3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                y3MouseMoved(evt);
+            }
+        });
+        y3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                y3MouseExited(evt);
+            }
+        });
+        y3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                y3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(y3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 530, 40, 30));
+
+        y4.setBackground(new java.awt.Color(0, 0, 0));
+        y4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        y4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        y4.setText("0");
+        y4.setBorder(null);
+        y4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                y4MouseMoved(evt);
+            }
+        });
+        y4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                y4MouseExited(evt);
+            }
+        });
+        y4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                y4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(y4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 530, 40, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -816,13 +897,6 @@ public class ME2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        AI2 fa = new AI2();
-        fa.setLocationRelativeTo(null);
-        fa.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         menu fa = new menu();
@@ -1014,10 +1088,12 @@ public class ME2 extends javax.swing.JFrame {
     }//GEN-LAST:event_cb12ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        DS5 fa = new DS5();
+        DS5 fa = new DS5(jme.getText(),ime.getText(),y1.getText(),y2.getText(),y3.getText(),y4.getText());
         fa.setLocationRelativeTo(null);
         fa.setVisible(true);
         this.dispose();
+        
+        
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void test1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test1ActionPerformed
@@ -1081,34 +1157,34 @@ public class ME2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_test4ActionPerformed
 
-    private void test5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseMoved
+    private void jmeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmeMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_test5MouseMoved
+    }//GEN-LAST:event_jmeMouseMoved
 
-    private void test5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseExited
+    private void jmeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmeMouseExited
        
         
         e=a1+a2+a3+a4;
         
-        test5.setText(Integer.toString(e));
-    }//GEN-LAST:event_test5MouseExited
+        jme.setText(Integer.toString(e));
+    }//GEN-LAST:event_jmeMouseExited
 
-    private void test5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test5ActionPerformed
+    private void jmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmeActionPerformed
         
-    }//GEN-LAST:event_test5ActionPerformed
+    }//GEN-LAST:event_jmeActionPerformed
 
-    private void test6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseMoved
+    private void imeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imeMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_test6MouseMoved
+    }//GEN-LAST:event_imeMouseMoved
 
-    private void test6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test6MouseExited
+    private void imeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imeMouseExited
         DecimalFormat formatData = new DecimalFormat("#.##");
        double y;
        
        y=(double)e/4;
        
         f = Double.valueOf(formatData.format(y));
-        test6.setText(Double.toString(f));
+        ime.setText(Double.toString(f));
         
         if (f < 0.5){
             test7.setText("Non Existent");
@@ -1133,11 +1209,11 @@ public class ME2 extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_test6MouseExited
+    }//GEN-LAST:event_imeMouseExited
 
-    private void test6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test6ActionPerformed
+    private void imeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_test6ActionPerformed
+    }//GEN-LAST:event_imeActionPerformed
 
     private void test7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test7MouseMoved
         // TODO add your handling code here:
@@ -1151,71 +1227,58 @@ public class ME2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_test7ActionPerformed
 
+    private void y2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y2MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y2MouseMoved
+
+    private void y2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y2MouseExited
+
+    private void y2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_y2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y2ActionPerformed
+
+    private void y1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y1MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y1MouseMoved
+
+    private void y1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y1MouseExited
+
+    private void y1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_y1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y1ActionPerformed
+
+    private void y3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y3MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y3MouseMoved
+
+    private void y3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y3MouseExited
+
+    private void y3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_y3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y3ActionPerformed
+
+    private void y4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y4MouseMoved
+
+    private void y4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_y4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y4MouseExited
+
+    private void y4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_y4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_y4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ME2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ME2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ME2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ME2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ME2().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox cb11;
@@ -1234,9 +1297,9 @@ public class ME2 extends javax.swing.JFrame {
     private javax.swing.JCheckBox cb42;
     private javax.swing.JCheckBox cb43;
     private javax.swing.JCheckBox cb44;
+    private javax.swing.JTextField ime;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox14;
     private javax.swing.JCheckBox jCheckBox15;
     private javax.swing.JCheckBox jCheckBox16;
@@ -1274,6 +1337,7 @@ public class ME2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jme;
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label8;
@@ -1281,8 +1345,10 @@ public class ME2 extends javax.swing.JFrame {
     private javax.swing.JTextField test2;
     private javax.swing.JTextField test3;
     private javax.swing.JTextField test4;
-    private javax.swing.JTextField test5;
-    private javax.swing.JTextField test6;
     private javax.swing.JTextField test7;
+    private javax.swing.JTextField y1;
+    private javax.swing.JTextField y2;
+    private javax.swing.JTextField y3;
+    private javax.swing.JTextField y4;
     // End of variables declaration//GEN-END:variables
 }

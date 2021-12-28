@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<queryString>
+		<![CDATA[SELECT
+     data_audit.`kode_audit` AS data_audit_kode_audit,
+     data_audit.`tanggal_audit` AS data_audit_tanggal_audit,
+     data_audit.`po9` AS data_audit_po9,
+     data_audit.`ai2` AS data_audit_ai2,
+     data_audit.`me2` AS data_audit_me2,
+     data_audit.`ds5` AS data_audit_ds5,
+     data_audit.`rata_audit` AS data_audit_rata_audit,
+     data_audit.`tingkat_level_maturity` AS data_audit_tingkat_level_maturity
+FROM
+     `data_audit` data_audit
+]]>
+	</queryString>
+	<field name="data_audit_kode_audit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_tanggal_audit" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_po9" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_ai2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_me2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_ds5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_rata_audit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_audit_tingkat_level_maturity" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="8" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="51" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="65" y="13" width="424" height="35"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Audit]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="568" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="123" width="84" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Kode Audit :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="85" y="123" width="82" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_kode_audit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="226" y="123" width="95" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Waktu Audit :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="332" y="123" width="184" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{data_audit_tanggal_audit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="183" width="208" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Plan and Organize 9              :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="183" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_po9}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="223" width="209" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Acquire and Implement 2     : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="223" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_ai2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="263" width="209" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Monitor and Evaluate           :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="263" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_me2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="303" width="209" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Deliver and Support 5          :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="303" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_ds5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="342" width="209" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Rata - rata Indeks                 :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="342" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_rata_audit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="381" width="209" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Tingkat Level Maturity        :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="313" y="381" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_tingkat_level_maturity}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="36" width="544" height="67"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[        Dalam Kegiatan Operasionalnya, SMAN 8 Padang menghadirkan pelayanan pada jam kerja untuk proses rekap nilai Raport (E-Raport) secara online yang telah diterapkan selama 1 tahun.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="455" width="544" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[           Untuk Posisi Level Maturity pada E-Raport SMA N 8 Padang Berada Pada ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="479" width="31" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_rata_audit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="121" y="479" width="412" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[. Artinya System E-Raport pada SMA N 8 Berada pada tingkat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="477" width="53" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Level]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="499" width="203" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data_audit_tingkat_level_maturity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="112" width="544" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="161" width="544" height="1"/>
+			</line>
+			<line>
+				<reportElement x="3" y="414" width="544" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="516" y="6" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="342" y="6" width="170" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="6" width="209" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

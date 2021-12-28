@@ -77,7 +77,7 @@ public class menu extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(152, 201, 45));
         jButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(21, 25, 28));
-        jButton8.setText("AUDITOR");
+        jButton8.setText("REKAP DATA AUDIT");
         jButton8.setBorder(null);
         jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.setFocusPainted(false);
@@ -103,7 +103,7 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 210, 170));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 550, 240));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 550, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,7 +122,10 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        
+        rekap_audit fa = new rekap_audit();
+        fa.setLocationRelativeTo(null);
+        fa.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

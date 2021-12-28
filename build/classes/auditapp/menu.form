@@ -100,7 +100,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="60" y="120" width="550" height="240"/>
+              <AbsoluteConstraints x="60" y="90" width="550" height="240"/>
             </Constraint>
           </Constraints>
 
@@ -119,7 +119,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="1c" green="19" red="15" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="AUDITOR"/>
+                <Property name="text" type="java.lang.String" value="REKAP DATA AUDIT"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
                 </Property>

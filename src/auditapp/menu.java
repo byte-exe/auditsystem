@@ -72,6 +72,7 @@ public class menu extends javax.swing.JFrame {
         jPanel1.add(jLabel_inven2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 220, 50));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton8.setBackground(new java.awt.Color(152, 201, 45));

@@ -16,16 +16,17 @@ import javax.swing.UIManager;
  * @author Yaseen Ameer
  */
 public class AI2 extends javax.swing.JFrame {
+    int cb51a, cb52a, cb53a, cb54a, cb55a, cb56a, cb57a;
     int cb41a, cb42a, cb43a, cb44a, cb45a, cb46a, cb47a;
     int cb31b, cb32b, cb33b, cb34b, cb35b, cb36b, cb37b;
     int cb21c, cb22c, cb23c, cb24c, cb25c, cb26c, cb27c;
     int cb11d, cb12d, cb13d, cb14d, cb15d, cb16d, cb17d;
     
     
-    int a, b, c, d, e;
+    int a, b, c, d, e, g;
    
     
-    int a1,a2,a3,a4;
+    int a1,a2,a3,a4,a5;
     
 
     double f;
@@ -91,6 +92,7 @@ public class AI2 extends javax.swing.JFrame {
         jLabel_inven24 = new javax.swing.JLabel();
         jLabel_inven33 = new javax.swing.JLabel();
         jLabel_inven34 = new javax.swing.JLabel();
+        jLabel_inven36 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel_inven38 = new javax.swing.JLabel();
         jLabel_inven40 = new javax.swing.JLabel();
@@ -106,6 +108,7 @@ public class AI2 extends javax.swing.JFrame {
         test2 = new javax.swing.JTextField();
         test3 = new javax.swing.JTextField();
         test4 = new javax.swing.JTextField();
+        test5 = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
         jLabel_inven53 = new javax.swing.JLabel();
         label3 = new java.awt.Label();
@@ -150,6 +153,13 @@ public class AI2 extends javax.swing.JFrame {
         jLabel_inven57 = new javax.swing.JLabel();
         bb = new javax.swing.JTextField();
         aa = new javax.swing.JTextField();
+        cb51 = new javax.swing.JCheckBox();
+        cb52 = new javax.swing.JCheckBox();
+        cb53 = new javax.swing.JCheckBox();
+        cb54 = new javax.swing.JCheckBox();
+        cb55 = new javax.swing.JCheckBox();
+        cb56 = new javax.swing.JCheckBox();
+        cb57 = new javax.swing.JCheckBox();
 
         jCheckBox3.setBackground(new java.awt.Color(0, 153, 102));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 0));
@@ -244,7 +254,7 @@ public class AI2 extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 670, 190, 40));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 660, 190, 40));
 
         jLabel_inven11.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven11.setForeground(new java.awt.Color(169, 224, 49));
@@ -299,10 +309,13 @@ public class AI2 extends javax.swing.JFrame {
         jLabel_inven24.setText("KS");
 
         jLabel_inven33.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        jLabel_inven33.setText("TS");
+        jLabel_inven33.setText("STS");
 
         jLabel_inven34.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel_inven34.setText("Bobot");
+
+        jLabel_inven36.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel_inven36.setText("TS");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -313,20 +326,20 @@ public class AI2 extends javax.swing.JFrame {
                 .addComponent(jLabel_inven10)
                 .addGap(363, 363, 363)
                 .addComponent(jLabel_inven17, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 534, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 545, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel_inven34)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel_inven21)
                         .addGap(49, 49, 49)
                         .addComponent(jLabel_inven18)
                         .addGap(55, 55, 55)
                         .addComponent(jLabel_inven24)
                         .addGap(42, 42, 42)
-                        .addComponent(jLabel_inven33)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel_inven34)
-                        .addGap(85, 85, 85))))
+                        .addComponent(jLabel_inven36)))
+                .addGap(37, 37, 37)
+                .addComponent(jLabel_inven33)
+                .addGap(22, 22, 22))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -337,7 +350,8 @@ public class AI2 extends javax.swing.JFrame {
                     .addComponent(jLabel_inven21)
                     .addComponent(jLabel_inven18)
                     .addComponent(jLabel_inven24)
-                    .addComponent(jLabel_inven33)))
+                    .addComponent(jLabel_inven33)
+                    .addComponent(jLabel_inven36)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -346,7 +360,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 1430, 80));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 1520, 80));
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -468,7 +482,7 @@ public class AI2 extends javax.swing.JFrame {
                 test1ActionPerformed(evt);
             }
         });
-        jPanel9.add(test1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 0, 40, 40));
+        jPanel9.add(test1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 0, 40, 40));
 
         test2.setBackground(new java.awt.Color(0, 204, 0));
         test2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -489,7 +503,7 @@ public class AI2 extends javax.swing.JFrame {
                 test2ActionPerformed(evt);
             }
         });
-        jPanel9.add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 0, 40, 40));
+        jPanel9.add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 0, 40, 40));
 
         test3.setBackground(new java.awt.Color(0, 204, 0));
         test3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -510,7 +524,7 @@ public class AI2 extends javax.swing.JFrame {
                 test3ActionPerformed(evt);
             }
         });
-        jPanel9.add(test3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 0, 40, 40));
+        jPanel9.add(test3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 0, 40, 40));
 
         test4.setBackground(new java.awt.Color(0, 204, 0));
         test4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -531,9 +545,30 @@ public class AI2 extends javax.swing.JFrame {
                 test4ActionPerformed(evt);
             }
         });
-        jPanel9.add(test4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 0, 40, 40));
+        jPanel9.add(test4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1450, 0, 40, 40));
 
-        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 1410, 40));
+        test5.setBackground(new java.awt.Color(0, 204, 0));
+        test5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        test5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        test5.setText("0");
+        test5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                test5MouseMoved(evt);
+            }
+        });
+        test5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                test5MouseExited(evt);
+            }
+        });
+        test5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                test5ActionPerformed(evt);
+            }
+        });
+        jPanel9.add(test5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 0, 40, 40));
+
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 1510, 40));
 
         jPanel12.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -549,9 +584,9 @@ public class AI2 extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addComponent(jLabel_inven53, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 955, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1036, Short.MAX_VALUE)
                 .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addGap(39, 39, 39))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,7 +598,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 1250, 40));
+        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 1310, 40));
 
         jPanel13.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -596,7 +631,7 @@ public class AI2 extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 915, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1015, Short.MAX_VALUE)
                 .addComponent(jaci, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(199, 199, 199))
         );
@@ -609,7 +644,7 @@ public class AI2 extends javax.swing.JFrame {
                     .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 1410, 40));
+        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 1510, 40));
 
         cb11.setBackground(new java.awt.Color(0, 153, 102));
         cb11.setForeground(new java.awt.Color(255, 255, 0));
@@ -618,7 +653,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb11ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 140, -1, -1));
+        jPanel1.add(cb11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 140, -1, -1));
 
         cb31.setBackground(new java.awt.Color(0, 153, 102));
         cb31.setForeground(new java.awt.Color(255, 255, 0));
@@ -627,7 +662,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb31ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 140, -1, -1));
+        jPanel1.add(cb31, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 140, -1, -1));
 
         cb21.setBackground(new java.awt.Color(0, 153, 102));
         cb21.setForeground(new java.awt.Color(255, 255, 0));
@@ -636,7 +671,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb21ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 140, -1, -1));
+        jPanel1.add(cb21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 140, -1, -1));
 
         cb41.setBackground(new java.awt.Color(0, 153, 102));
         cb41.setForeground(new java.awt.Color(255, 255, 0));
@@ -645,7 +680,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb41ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 140, -1, -1));
+        jPanel1.add(cb41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 140, -1, -1));
 
         cb43.setBackground(new java.awt.Color(0, 153, 102));
         cb43.setForeground(new java.awt.Color(255, 255, 0));
@@ -654,7 +689,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb43ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 230, -1, -1));
+        jPanel1.add(cb43, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 230, -1, -1));
 
         cb33.setBackground(new java.awt.Color(0, 153, 102));
         cb33.setForeground(new java.awt.Color(255, 255, 0));
@@ -663,7 +698,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb33ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 230, -1, -1));
+        jPanel1.add(cb33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 230, -1, -1));
 
         cb23.setBackground(new java.awt.Color(0, 153, 102));
         cb23.setForeground(new java.awt.Color(255, 255, 0));
@@ -672,7 +707,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb23ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 230, -1, -1));
+        jPanel1.add(cb23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 230, -1, -1));
 
         cb13.setBackground(new java.awt.Color(0, 153, 102));
         cb13.setForeground(new java.awt.Color(255, 255, 0));
@@ -681,7 +716,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb13ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 230, -1, -1));
+        jPanel1.add(cb13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 230, -1, -1));
 
         cb45.setBackground(new java.awt.Color(0, 153, 102));
         cb45.setForeground(new java.awt.Color(255, 255, 0));
@@ -690,7 +725,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb45ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb45, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 320, -1, -1));
+        jPanel1.add(cb45, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 320, -1, -1));
 
         cb35.setBackground(new java.awt.Color(0, 153, 102));
         cb35.setForeground(new java.awt.Color(255, 255, 0));
@@ -699,7 +734,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb35ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 320, -1, -1));
+        jPanel1.add(cb35, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 320, -1, -1));
 
         cb25.setBackground(new java.awt.Color(0, 153, 102));
         cb25.setForeground(new java.awt.Color(255, 255, 0));
@@ -708,7 +743,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb25ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb25, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 320, -1, -1));
+        jPanel1.add(cb25, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 320, -1, -1));
 
         cb15.setBackground(new java.awt.Color(0, 153, 102));
         cb15.setForeground(new java.awt.Color(255, 255, 0));
@@ -717,7 +752,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb15ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 320, -1, -1));
+        jPanel1.add(cb15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 320, -1, -1));
 
         cb46.setBackground(new java.awt.Color(0, 153, 102));
         cb46.setForeground(new java.awt.Color(255, 255, 0));
@@ -726,7 +761,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb46ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb46, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 360, -1, -1));
+        jPanel1.add(cb46, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 360, -1, -1));
 
         cb36.setBackground(new java.awt.Color(0, 153, 102));
         cb36.setForeground(new java.awt.Color(255, 255, 0));
@@ -735,7 +770,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb36ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 360, -1, -1));
+        jPanel1.add(cb36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 360, -1, -1));
 
         cb26.setBackground(new java.awt.Color(0, 153, 102));
         cb26.setForeground(new java.awt.Color(255, 255, 0));
@@ -744,7 +779,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb26ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 360, -1, -1));
+        jPanel1.add(cb26, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 360, -1, -1));
 
         cb16.setBackground(new java.awt.Color(0, 153, 102));
         cb16.setForeground(new java.awt.Color(255, 255, 0));
@@ -753,7 +788,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb16ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 360, -1, -1));
+        jPanel1.add(cb16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 360, -1, -1));
 
         cb44.setBackground(new java.awt.Color(0, 153, 102));
         cb44.setForeground(new java.awt.Color(255, 255, 0));
@@ -762,7 +797,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb44ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb44, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 270, -1, -1));
+        jPanel1.add(cb44, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 270, -1, -1));
 
         cb34.setBackground(new java.awt.Color(0, 153, 102));
         cb34.setForeground(new java.awt.Color(255, 255, 0));
@@ -771,7 +806,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb34ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 270, -1, -1));
+        jPanel1.add(cb34, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 270, -1, -1));
 
         cb24.setBackground(new java.awt.Color(0, 153, 102));
         cb24.setForeground(new java.awt.Color(255, 255, 0));
@@ -780,7 +815,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb24ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 270, 20, -1));
+        jPanel1.add(cb24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 270, 20, -1));
 
         cb14.setBackground(new java.awt.Color(0, 153, 102));
         cb14.setForeground(new java.awt.Color(255, 255, 0));
@@ -789,7 +824,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb14ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 270, -1, -1));
+        jPanel1.add(cb14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 270, -1, -1));
 
         cb42.setBackground(new java.awt.Color(0, 153, 102));
         cb42.setForeground(new java.awt.Color(255, 255, 0));
@@ -798,7 +833,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb42ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 180, -1, -1));
+        jPanel1.add(cb42, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 180, -1, -1));
 
         cb32.setBackground(new java.awt.Color(0, 153, 102));
         cb32.setForeground(new java.awt.Color(255, 255, 0));
@@ -807,7 +842,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb32ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 180, -1, -1));
+        jPanel1.add(cb32, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 180, -1, -1));
 
         cb22.setBackground(new java.awt.Color(0, 153, 102));
         cb22.setForeground(new java.awt.Color(255, 255, 0));
@@ -816,7 +851,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb22ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 180, -1, -1));
+        jPanel1.add(cb22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 180, -1, -1));
 
         cb12.setBackground(new java.awt.Color(0, 153, 102));
         cb12.setForeground(new java.awt.Color(255, 255, 0));
@@ -825,7 +860,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb12ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 180, -1, -1));
+        jPanel1.add(cb12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 180, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 0));
 
@@ -855,7 +890,7 @@ public class AI2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(iaci, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                .addComponent(iaci, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -865,7 +900,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 500, 80, 40));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 500, 100, 40));
 
         jPanel11.setBackground(new java.awt.Color(102, 153, 0));
 
@@ -900,12 +935,12 @@ public class AI2 extends javax.swing.JFrame {
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addComponent(test7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 600, 430, 40));
+        jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 600, 430, 40));
 
         jButton10.setBackground(new java.awt.Color(152, 201, 45));
         jButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
@@ -919,7 +954,7 @@ public class AI2 extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 670, 190, 40));
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 660, 190, 40));
 
         cb47.setBackground(new java.awt.Color(0, 153, 102));
         cb47.setForeground(new java.awt.Color(255, 255, 0));
@@ -928,7 +963,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb47ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb47, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 400, -1, -1));
+        jPanel1.add(cb47, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 400, -1, -1));
 
         cb37.setBackground(new java.awt.Color(0, 153, 102));
         cb37.setForeground(new java.awt.Color(255, 255, 0));
@@ -937,7 +972,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb37ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 400, -1, -1));
+        jPanel1.add(cb37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 400, -1, -1));
 
         cb27.setBackground(new java.awt.Color(0, 153, 102));
         cb27.setForeground(new java.awt.Color(255, 255, 0));
@@ -946,7 +981,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb27ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 400, -1, -1));
+        jPanel1.add(cb27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 400, -1, -1));
 
         cb17.setBackground(new java.awt.Color(0, 153, 102));
         cb17.setForeground(new java.awt.Color(255, 255, 0));
@@ -955,7 +990,7 @@ public class AI2 extends javax.swing.JFrame {
                 cb17ActionPerformed(evt);
             }
         });
-        jPanel1.add(cb17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 400, -1, -1));
+        jPanel1.add(cb17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 400, -1, -1));
 
         jPanel14.setBackground(new java.awt.Color(102, 153, 0));
 
@@ -979,12 +1014,12 @@ public class AI2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 500, 90, 40));
+        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 500, 90, 40));
 
         jLabel_inven57.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel_inven57.setForeground(new java.awt.Color(0, 153, 0));
         jLabel_inven57.setText("Maturity Level");
-        jPanel1.add(jLabel_inven57, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 610, -1, -1));
+        jPanel1.add(jLabel_inven57, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 610, -1, -1));
 
         bb.setBackground(new java.awt.Color(0, 0, 0));
         bb.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1030,13 +1065,76 @@ public class AI2 extends javax.swing.JFrame {
         });
         jPanel1.add(aa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 680, 60, 40));
 
+        cb51.setBackground(new java.awt.Color(0, 153, 102));
+        cb51.setForeground(new java.awt.Color(255, 255, 0));
+        cb51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb51ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb51, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 140, -1, -1));
+
+        cb52.setBackground(new java.awt.Color(0, 153, 102));
+        cb52.setForeground(new java.awt.Color(255, 255, 0));
+        cb52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb52ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb52, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 180, -1, -1));
+
+        cb53.setBackground(new java.awt.Color(0, 153, 102));
+        cb53.setForeground(new java.awt.Color(255, 255, 0));
+        cb53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb53ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb53, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 230, -1, -1));
+
+        cb54.setBackground(new java.awt.Color(0, 153, 102));
+        cb54.setForeground(new java.awt.Color(255, 255, 0));
+        cb54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb54ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb54, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 270, -1, -1));
+
+        cb55.setBackground(new java.awt.Color(0, 153, 102));
+        cb55.setForeground(new java.awt.Color(255, 255, 0));
+        cb55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb55ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb55, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 320, -1, -1));
+
+        cb56.setBackground(new java.awt.Color(0, 153, 102));
+        cb56.setForeground(new java.awt.Color(255, 255, 0));
+        cb56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb56ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb56, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 360, -1, -1));
+
+        cb57.setBackground(new java.awt.Color(0, 153, 102));
+        cb57.setForeground(new java.awt.Color(255, 255, 0));
+        cb57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb57ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cb57, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 400, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1553, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1437,7 +1535,7 @@ public class AI2 extends javax.swing.JFrame {
     private void jaciMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jaciMouseExited
        
         
-        e=a1+a2+a3+a4;
+        e=a1+a2+a3+a4+a5;
         
         jaci.setText(Integer.toString(e));
     }//GEN-LAST:event_jaciMouseExited
@@ -1524,6 +1622,91 @@ public class AI2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_aaActionPerformed
 
+    private void cb51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb51ActionPerformed
+          if(cb51.isSelected()){
+            cb51a=1;
+            cb51.setSelected(true);
+        }else{
+            cb51a=0;
+            cb51.setSelected(false);
+        }
+    }//GEN-LAST:event_cb51ActionPerformed
+
+    private void cb52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb52ActionPerformed
+        if(cb52.isSelected()){
+            cb52a=1;
+            cb52.setSelected(true);
+        }else{
+            cb52a=0;
+            cb52.setSelected(false);
+        }
+    }//GEN-LAST:event_cb52ActionPerformed
+
+    private void cb53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb53ActionPerformed
+          if(cb53.isSelected()){
+            cb53a=1;
+            cb53.setSelected(true);
+        }else{
+            cb53a=0;
+            cb53.setSelected(false);
+        }
+    }//GEN-LAST:event_cb53ActionPerformed
+
+    private void cb54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb54ActionPerformed
+          if(cb54.isSelected()){
+            cb54a=1;
+            cb54.setSelected(true);
+        }else{
+            cb54a=0;
+            cb54.setSelected(false);
+        }
+    }//GEN-LAST:event_cb54ActionPerformed
+
+    private void cb55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb55ActionPerformed
+         if(cb55.isSelected()){
+            cb55a=1;
+            cb55.setSelected(true);
+        }else{
+            cb55a=0;
+            cb55.setSelected(false);
+        }
+    }//GEN-LAST:event_cb55ActionPerformed
+
+    private void cb56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb56ActionPerformed
+        if(cb56.isSelected()){
+            cb56a=1;
+            cb56.setSelected(true);
+        }else{
+            cb56a=0;
+            cb56.setSelected(false);
+        }
+    }//GEN-LAST:event_cb56ActionPerformed
+
+    private void cb57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb57ActionPerformed
+          if(cb57.isSelected()){
+            cb57a=1;
+            cb57.setSelected(true);
+        }else{
+            cb57a=0;
+            cb57.setSelected(false);
+        }
+    }//GEN-LAST:event_cb57ActionPerformed
+
+    private void test5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test5MouseMoved
+
+    private void test5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseExited
+        g = cb51a+cb52a+cb53a+cb54a+cb55a+cb56a+cb57a;
+        a5 = g * 5;
+        
+        test5.setText(Integer.toString(g));
+    }//GEN-LAST:event_test5MouseExited
+
+    private void test5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1560,6 +1743,13 @@ public class AI2 extends javax.swing.JFrame {
     private javax.swing.JCheckBox cb45;
     private javax.swing.JCheckBox cb46;
     private javax.swing.JCheckBox cb47;
+    private javax.swing.JCheckBox cb51;
+    private javax.swing.JCheckBox cb52;
+    private javax.swing.JCheckBox cb53;
+    private javax.swing.JCheckBox cb54;
+    private javax.swing.JCheckBox cb55;
+    private javax.swing.JCheckBox cb56;
+    private javax.swing.JCheckBox cb57;
     private javax.swing.JTextField iaci;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton8;
@@ -1586,6 +1776,7 @@ public class AI2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_inven33;
     private javax.swing.JLabel jLabel_inven34;
     private javax.swing.JLabel jLabel_inven35;
+    private javax.swing.JLabel jLabel_inven36;
     private javax.swing.JLabel jLabel_inven38;
     private javax.swing.JLabel jLabel_inven40;
     private javax.swing.JLabel jLabel_inven41;
@@ -1616,6 +1807,7 @@ public class AI2 extends javax.swing.JFrame {
     private javax.swing.JTextField test2;
     private javax.swing.JTextField test3;
     private javax.swing.JTextField test4;
+    private javax.swing.JTextField test5;
     private javax.swing.JTextField test7;
     // End of variables declaration//GEN-END:variables
 }

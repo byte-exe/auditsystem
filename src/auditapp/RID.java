@@ -7,6 +7,8 @@
 package auditapp;
 
 
+import java.awt.Color;
+import static java.awt.Color.BLUE;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,6 +18,12 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -163,6 +171,7 @@ public class RID extends javax.swing.JFrame {
         kode_audit = new javax.swing.JTextField();
         jLabel_inven40 = new javax.swing.JLabel();
         tgl_audit = new com.toedter.calendar.JDateChooser();
+        jButton10 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -251,7 +260,7 @@ public class RID extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 710, 190, 40));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 700, 190, 40));
 
         jLabel_inven16.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel_inven16.setForeground(new java.awt.Color(169, 224, 49));
@@ -596,6 +605,20 @@ public class RID extends javax.swing.JFrame {
         });
         jPanel1.add(tgl_audit, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 150, 30));
 
+        jButton10.setBackground(new java.awt.Color(152, 201, 45));
+        jButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(21, 25, 28));
+        jButton10.setText("Diagram");
+        jButton10.setBorder(null);
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton10.setFocusPainted(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 700, 190, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -803,6 +826,32 @@ public class RID extends javax.swing.JFrame {
       }
     }//GEN-LAST:event_tgl_auditPropertyChange
 
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        String a=j1.getText();
+        String b=j2.getText();
+        String c=j3.getText();
+        String d=j4.getText();
+        
+        
+        
+        DefaultCategoryDataset piedata=new DefaultCategoryDataset();
+        piedata.setValue(new Double(a), "Nilai Indeks", "PO9");
+        piedata.setValue(new Double(b), "Nilai Indeks", "AI2");
+        piedata.setValue(new Double(c), "Nilai Indeks", "ME2");
+        piedata.setValue(new Double(d), "Nilai Indeks", "DS5");
+       
+        
+        JFreeChart chart =ChartFactory.createBarChart("Grafik Hasil Indeks","X","Y",piedata);
+        chart.setBackgroundPaint(Color.GREEN);
+        chart.getTitle().setPaint(Color.BLACK);
+        CategoryPlot p = chart.getCategoryPlot();
+        p.setRangeGridlinePaint(Color.BLUE);
+        ChartFrame frame =new ChartFrame ("framechart",chart);
+        frame.setVisible(true);
+        frame.setBounds(500, 200, 500, 500);
+      
+    }//GEN-LAST:event_jButton10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -813,6 +862,7 @@ public class RID extends javax.swing.JFrame {
     private javax.swing.JTextField j2;
     private javax.swing.JTextField j3;
     private javax.swing.JTextField j4;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel_inven10;
     private javax.swing.JLabel jLabel_inven16;

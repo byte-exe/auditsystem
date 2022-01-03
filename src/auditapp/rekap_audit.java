@@ -81,13 +81,11 @@ public class rekap_audit extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel_inven5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabel_data = new javax.swing.JTable();
         cetak = new javax.swing.JButton();
         jLabel_inven6 = new javax.swing.JLabel();
         menu = new javax.swing.JButton();
-        kode = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -100,11 +98,6 @@ public class rekap_audit extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8_User_Shield_100px.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 100, -1));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 172, 150, 0));
-
-        jLabel_inven5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        jLabel_inven5.setForeground(new java.awt.Color(169, 224, 49));
-        jLabel_inven5.setText("Pilih Kode Audit yang akan di Cetak");
-        jPanel1.add(jLabel_inven5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 420, 50));
 
         tabel_data.setAutoCreateRowSorter(true);
         tabel_data.setBackground(new java.awt.Color(30, 35, 40));
@@ -141,7 +134,7 @@ public class rekap_audit extends javax.swing.JFrame {
                 cetakActionPerformed(evt);
             }
         });
-        jPanel1.add(cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 240, 40));
+        jPanel1.add(cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 240, 40));
 
         jLabel_inven6.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         jLabel_inven6.setForeground(new java.awt.Color(169, 224, 49));
@@ -161,11 +154,7 @@ public class rekap_audit extends javax.swing.JFrame {
                 menuActionPerformed(evt);
             }
         });
-        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 200, 40));
-
-        kode.setBackground(new java.awt.Color(102, 204, 0));
-        kode.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel1.add(kode, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 350, 30));
+        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 200, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,7 +174,7 @@ public class rekap_audit extends javax.swing.JFrame {
     
         try{
             File file = new File("src/auditapp/report_audit.jrxml");
-            parameter.put("kode_audit",kode.getText());
+        
             jasperDesign = JRXmlLoader.load(file);
             param.clear();
             jasperReport = JasperCompileManager.compileReport(jasperDesign);
@@ -250,12 +239,10 @@ public class rekap_audit extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton cetak;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel_inven5;
     private javax.swing.JLabel jLabel_inven6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField kode;
     private javax.swing.JButton menu;
     private javax.swing.JTable tabel_data;
     // End of variables declaration//GEN-END:variables

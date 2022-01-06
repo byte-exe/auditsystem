@@ -17,11 +17,11 @@ public class MinFrame {
         NewSignin sign = new NewSignin();
         screen.setVisible(true);
         try {
-            for (int row = 0; row <=100; row++) {
-                Thread.sleep(100);
+            for (int row = 0; row <=50; row++) {
+                Thread.sleep(50);
                 screen.loadingnumber.setText(Integer.toString(row)+"%");
                 screen.loadingprogress.setValue(row);
-                if (row == 100) {
+                if (row == 50) {
                     
                     screen.setVisible(false);
                     sign.setVisible(true);

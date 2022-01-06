@@ -40,8 +40,7 @@ public class RID extends javax.swing.JFrame {
     public RID(String jds, String ids, String x1, String x2, String x3, String x4, String x5, String x6) {
         
         koneksi_database();
-        
-        
+       
         initComponents();
         this.setLocationRelativeTo(null);
       
@@ -88,19 +87,19 @@ public class RID extends javax.swing.JFrame {
             tm.setText("Non Existent");
             tm1.setText("Non Existent");
         }else{
-            if(z >0.52 && z <1.5){
+            if(z >=0.52 && z <=1.5){
                 tm.setText("Intial/Ad Hoc");
                 tm1.setText("Intial/Ad Hoc");
             }else{
-                if(z >1.51 && z<2.5){
+                if(z >=1.51 && z<=2.5){
                     tm.setText("Repeatable but Intuitive");
                     tm1.setText("Repeatable but Intuitive");
                 }else{
-                    if(z>2.51 && z<3.50){
+                    if(z>=2.51 && z<=3.50){
                         tm.setText("Defined Process");
                         tm1.setText("Defined Process");
                     }else{
-                        if(z>3.51 && z<4.5){
+                        if(z>=3.51 && z<=4.5){
                             tm.setText("Managed And Measurable");
                             tm1.setText("Managed And Measurable");
                         }else{
@@ -927,25 +926,5 @@ private void koneksi_database(){
    }
 }
 
-private void AutoNumber(){
-try {
-sql  = "SELECT MAX(RIGHT(kode_audit,4)) AS no_auto FROM data_audit";
-stat = con.createStatement();
-rs   = stat.executeQuery(sql);
-if(rs.next()){
-String no_auto, nol_plus;
-int p;
-no_auto = Integer.toString(rs.getInt(1)+1);
-p = no_auto.length();
-nol_plus = "";
-for(int i=1;i<=4-p;i++){
-nol_plus = nol_plus + "0";    
-}
-kode_audit.setText("P"+nol_plus+no_auto);
-}
-} catch (Exception e) {
-    kode_audit.setText("P0001");    
-}          
-}
 
 }

@@ -326,7 +326,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addComponent(jLabel_inven10)
                 .addGap(363, 363, 363)
                 .addComponent(jLabel_inven17, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 545, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 535, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel_inven34)
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -345,7 +345,7 @@ public class AI2 extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel_inven34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_inven21)
                     .addComponent(jLabel_inven18)
@@ -360,7 +360,7 @@ public class AI2 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 1520, 80));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 1510, 70));
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -1560,16 +1560,16 @@ public class AI2 extends javax.swing.JFrame {
         if (f < 0.5){
             test7.setText("Non Existent");
         }else{
-            if(f >0.52 && f <1.5){
+            if(f >=0.52 && f <=1.5){
                 test7.setText("Intial/Ad Hoc");
             }else{
-                if(f >1.51 && f<2.5){
+                if(f >=1.51 && f<=2.5){
                     test7.setText("Repeatable but Intuitive");
                 }else{
-                    if(f>2.51 && f<3.50){
+                    if(f>=2.51 && f<=3.50){
                         test7.setText("Defined Process");
                     }else{
-                        if(f>3.51 && f<4.5){
+                        if(f>=3.51 && f<=4.5){
                             test7.setText("Managed And Measurable");
                         }else{
                             if(f>4.51){

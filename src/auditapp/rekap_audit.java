@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -86,6 +87,8 @@ public class rekap_audit extends javax.swing.JFrame {
         cetak = new javax.swing.JButton();
         jLabel_inven6 = new javax.swing.JLabel();
         menu = new javax.swing.JButton();
+        menu1 = new javax.swing.JButton();
+        kode_audit = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -134,7 +137,7 @@ public class rekap_audit extends javax.swing.JFrame {
                 cetakActionPerformed(evt);
             }
         });
-        jPanel1.add(cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 240, 40));
+        jPanel1.add(cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 240, 40));
 
         jLabel_inven6.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         jLabel_inven6.setForeground(new java.awt.Color(169, 224, 49));
@@ -154,7 +157,33 @@ public class rekap_audit extends javax.swing.JFrame {
                 menuActionPerformed(evt);
             }
         });
-        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 200, 40));
+        jPanel1.add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 200, 40));
+
+        menu1.setBackground(new java.awt.Color(152, 201, 45));
+        menu1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        menu1.setForeground(new java.awt.Color(21, 25, 28));
+        menu1.setText("Hapus Data");
+        menu1.setBorder(null);
+        menu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        menu1.setFocusPainted(false);
+        menu1.setOpaque(false);
+        menu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 200, 40));
+
+        kode_audit.setBackground(new java.awt.Color(31, 36, 42));
+        kode_audit.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        kode_audit.setForeground(new java.awt.Color(102, 204, 0));
+        kode_audit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
+        kode_audit.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                kode_auditMouseMoved(evt);
+            }
+        });
+        jPanel1.add(kode_audit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, 330, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,6 +220,40 @@ public class rekap_audit extends javax.swing.JFrame {
         fa.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_menuActionPerformed
+
+    private void menu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu1ActionPerformed
+        try {
+            sql = "DELETE FROM data_audit WHERE kode_audit='"+kode_audit.getText()+"' ";
+            stat = con.createStatement();
+            stat.execute(sql);
+            JOptionPane.showMessageDialog(null, "Terhapus...!");
+          
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gagal...!"+e);
+        }
+
+        if(kode_audit.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane, "Maaf, Kode Audit Tolong Di Isi !",
+                "Informasi Penting",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            try{
+                sql = "delete FROM data_audit where kode_audit='"+kode_audit.getText()+"'";
+                stat=con.createStatement();
+                stat.execute(sql);
+                JOptionPane.showMessageDialog(rootPane, "Data Sudah Dihapus !");
+                stat.close();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Gagal !"+e);
+            }
+           
+        }
+        
+         view_audit("SELECT * FROM data_audit");
+    }//GEN-LAST:event_menu1ActionPerformed
+
+    private void kode_auditMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kode_auditMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kode_auditMouseMoved
 
     /**
      * @param args the command line arguments
@@ -243,7 +306,9 @@ public class rekap_audit extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField kode_audit;
     private javax.swing.JButton menu;
+    private javax.swing.JButton menu1;
     private javax.swing.JTable tabel_data;
     // End of variables declaration//GEN-END:variables
 

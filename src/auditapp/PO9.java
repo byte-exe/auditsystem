@@ -28,6 +28,7 @@ public class PO9 extends javax.swing.JFrame {
     int a1,a2,a3,a4,a5;
     
     double f;
+    double y;
 
     /**
      * Creates new form NewSignin
@@ -46,6 +47,9 @@ public class PO9 extends javax.swing.JFrame {
             System.err.println(ex);
         }
         
+         
+         
+         
     }
 
     /**
@@ -282,7 +286,7 @@ public class PO9 extends javax.swing.JFrame {
         jLabel_inven65.setText("TS");
         jPanel4.add(jLabel_inven65, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 10, 30, 30));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 1530, 50));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 1520, 50));
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 51));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -344,7 +348,7 @@ public class PO9 extends javax.swing.JFrame {
                 test2ActionPerformed(evt);
             }
         });
-        jPanel9.add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 0, 40, 40));
+        jPanel9.add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 0, 40, 40));
 
         test3.setBackground(new java.awt.Color(0, 204, 0));
         test3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -365,7 +369,7 @@ public class PO9 extends javax.swing.JFrame {
                 test3ActionPerformed(evt);
             }
         });
-        jPanel9.add(test3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 0, 40, 40));
+        jPanel9.add(test3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 0, 40, 40));
 
         test4.setBackground(new java.awt.Color(0, 204, 0));
         test4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -386,18 +390,29 @@ public class PO9 extends javax.swing.JFrame {
                 test4ActionPerformed(evt);
             }
         });
-        jPanel9.add(test4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 0, 40, 40));
+        jPanel9.add(test4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 0, 40, 40));
 
         test5.setBackground(new java.awt.Color(0, 204, 0));
         test5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         test5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         test5.setText("0");
         test5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                test5MouseDragged(evt);
+            }
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 test5MouseMoved(evt);
             }
         });
+        test5.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                test5MouseWheelMoved(evt);
+            }
+        });
         test5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                test5MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 test5MouseExited(evt);
             }
@@ -407,9 +422,14 @@ public class PO9 extends javax.swing.JFrame {
                 test5ActionPerformed(evt);
             }
         });
-        jPanel9.add(test5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 0, 40, 40));
+        test5.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                test5PropertyChange(evt);
+            }
+        });
+        jPanel9.add(test5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 0, 40, 40));
 
-        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, 1520, 40));
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 610, 1530, 40));
 
         jPanel12.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -425,7 +445,7 @@ public class PO9 extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addComponent(jLabel_inven53, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 985, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 995, Short.MAX_VALUE)
                 .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -439,7 +459,7 @@ public class PO9 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 1230, 40));
+        jPanel1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 1240, 40));
 
         jPanel13.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -472,9 +492,9 @@ public class PO9 extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 976, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 984, Short.MAX_VALUE)
                 .addComponent(jpo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(286, 286, 286))
+                .addGap(288, 288, 288))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -485,7 +505,7 @@ public class PO9 extends javax.swing.JFrame {
                     .addComponent(jLabel_inven55, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 710, 1520, 40));
+        jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 710, 1530, 40));
 
         cb11.setBackground(new java.awt.Color(0, 153, 102));
         cb11.setForeground(new java.awt.Color(255, 255, 0));
@@ -1486,7 +1506,6 @@ public class PO9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jpoMouseMoved
 
     private void jpoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpoMouseExited
-       
         
         e=a1+a2+a3+a4+a5;
         
@@ -1502,10 +1521,10 @@ public class PO9 extends javax.swing.JFrame {
     }//GEN-LAST:event_ipoMouseMoved
 
     private void ipoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipoMouseExited
-        DecimalFormat formatData = new DecimalFormat("#.##");
-       double y;
+       DecimalFormat formatData = new DecimalFormat("#.##");
        
-       y=(double)e/8;
+       
+        y=(double)e/8;
        
         f = Double.valueOf(formatData.format(y));
         ipo.setText(Double.toString(f));
@@ -1513,16 +1532,16 @@ public class PO9 extends javax.swing.JFrame {
         if (f < 0.5){
             test7.setText("Non Existent");
         }else{
-            if(f >0.52 && f <1.5){
+            if(f >=0.52 && f <=1.5){
                 test7.setText("Intial/Ad Hoc");
             }else{
-                if(f >1.51 && f<2.5){
+                if(f >=1.51 && f<=2.5){
                     test7.setText("Repeatable but Intuitive");
                 }else{
-                    if(f>2.51 && f<3.50){
+                    if(f>=2.51 && f<=3.50){
                         test7.setText("Defined Process");
                     }else{
-                        if(f>3.51 && f<4.5){
+                        if(f>=3.51 && f<=4.5){
                             test7.setText("Managed And Measurable");
                         }else{
                             if(f>4.51){
@@ -1692,7 +1711,7 @@ public class PO9 extends javax.swing.JFrame {
     }//GEN-LAST:event_test5MouseMoved
 
     private void test5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseExited
-        g = cb51a+cb52a+cb53a+cb54a+cb55a+cb56a+cb57a+cb58a;
+         g = cb51a+cb52a+cb53a+cb54a+cb55a+cb56a+cb57a+cb58a;
         a5 = g * 5;
         
         test5.setText(Integer.toString(g));
@@ -1701,6 +1720,22 @@ public class PO9 extends javax.swing.JFrame {
     private void test5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_test5ActionPerformed
+
+    private void test5PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_test5PropertyChange
+      
+    }//GEN-LAST:event_test5PropertyChange
+
+    private void test5MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_test5MouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test5MouseWheelMoved
+
+    private void test5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseClicked
+       
+    }//GEN-LAST:event_test5MouseClicked
+
+    private void test5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_test5MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_test5MouseDragged
 
     /**
      * @param args the command line arguments
